@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DJ Dangerous Raj Desai | Official</title>
+
+<meta name="description"
+content="DJ Dangerous Raj Desai — EDM, house, electronic music, new releases, videos and more.">
+
+<meta name="theme-color" content="#050505">
+
+<style>
+/* =========================================================
+   DJ DANGEROUS RAJ DESAI
+   ONE-PAGE STATIC ARTIST SITE
+   ========================================================= */
+
+:root {
+    --bg: #050505;
+    --bg2: #0d0d0d;
+    --card: #111111;
+    --card2: #171717;
+    --red: #ff1738;
+    --red2: #ff3b58;
+    --white: #ffffff;
+    --muted: #a7a7a7;
+    --line: rgba(255,255,255,.10);
+    --max: 1200px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background:
+        radial-gradient(circle at 50% -10%, rgba(255,23,56,.18), transparent 35%),
+        var(--bg);
+    color: var(--white);
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+    line-height: 1.5;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: min(92%, var(--max));
+    margin: auto;
+}
+
+/* =========================================================
+   NAV
+   ========================================================= */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(16px);
+    background: rgba(5,5,5,.88);
+    border-bottom: 1px solid var(--line);
+}
+
+.nav-inner {
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    font-weight: 900;
+    letter-spacing: -1px;
+    font-size: 20px;
+}
+
+.logo span {
+    color: var(--red);
+}
+
+.nav-links {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.nav-links a {
+    color: #ddd;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.nav-links a:hover {
+    color: var(--red);
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    min-height: 620px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 100px 20px;
+    background:
+        linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.92)),
+        radial-gradient(circle at center, rgba(255,23,56,.25), transparent 45%);
+}
+
+.hero-inner {
+    max-width: 950px;
+}
+
+.kicker {
+    color: var(--red);
+    font-weight: 900;
+    letter-spacing: 4px;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-size: clamp(50px, 10vw, 110px);
+    line-height: .9;
+    margin: 20px 0;
+    font-weight: 1000;
+    letter-spacing: -6px;
+}
+
+.hero h1 span {
+    color: var(--red);
+}
+
+.hero p {
+    color: #ccc;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 18px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.button {
+    padding: 13px 22px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: #151515;
+    font-weight: 800;
+    transition: .2s;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    border-color: var(--red);
+}
+
+.button.primary {
+    background: var(--red);
+    border-color: var(--red);
+}
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.section-title h2 {
+    margin: 0;
+    font-size: clamp(28px, 5vw, 48px);
+    letter-spacing: -2px;
+}
+
+.section-title p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.red {
+    color: var(--red);
+}
+
+/* =========================================================
+   DOOMSDAY FEATURE
+   ========================================================= */
+
+.feature {
+    border: 1px solid rgba(255,23,56,.35);
+    border-radius: 24px;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 80% 20%, rgba(255,23,56,.25), transparent 30%),
+        linear-gradient(135deg,#170407,#080808 60%);
+    box-shadow: 0 20px 80px rgba(255,0,40,.10);
+}
+
+.feature-content {
+    padding: clamp(30px,6vw,70px);
+}
+
+.feature-label {
+    color: var(--red);
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.feature h3 {
+    font-size: clamp(34px,6vw,72px);
+    line-height: .95;
+    margin: 12px 0 20px;
+    letter-spacing: -3px;
+}
+
+.feature p {
+    max-width: 700px;
+    color: #c8c8c8;
+}
+
+/* =========================================================
+   VIDEO GRID
+   ========================================================= */
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.video-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: .2s;
+}
+
+.video-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255,23,56,.5);
+}
+
+.thumbnail {
+    position: relative;
+    aspect-ratio: 16/9;
+    background: #191919;
+    overflow: hidden;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 58px;
+    height: 58px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(255,23,56,.94);
+    font-size: 22px;
+}
+
+.badge {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background: var(--red);
+    padding: 5px 9px;
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.video-info {
+    padding: 15px;
+}
+
+.video-info h3 {
+    margin: 0 0 6px;
+    font-size: 16px;
+}
+
+.video-info p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* =========================================================
+   TIKTOK / INSTAGRAM
+   ========================================================= */
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.social-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.social-image {
+    aspect-ratio: 9/12;
+    background:
+        linear-gradient(135deg,#161616,#050505);
+    display: grid;
+    place-items: center;
+    color: #777;
+    font-weight: 900;
+    font-size: 14px;
+    text-align: center;
+    padding: 20px;
+}
+
+.social-info {
+    padding: 15px;
+}
+
+.social-info h3 {
+    margin: 0 0 5px;
+}
+
+.social-info p {
+    margin: 0 0 12px;
+    color: var(--muted);
+}
+
+/* =========================================================
+   MUSIC LINKS
+   ========================================================= */
+
+.music-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 14px;
+}
+
+.music-link {
+    min-height: 100px;
+    padding: 20px;
+    border-radius: 15px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 900;
+    transition: .2s;
+}
+
+.music-link:hover {
+    background: var(--red);
+    border-color: var(--red);
+}
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+
+.about {
+    max-width: 850px;
+}
+
+.about p {
+    color: #c7c7c7;
+    font-size: 17px;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    border-top: 1px solid var(--line);
+    padding: 45px 0;
+    text-align: center;
+    color: var(--muted);
+}
+
+footer strong {
+    color: var(--white);
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .video-grid,
+    .social-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .music-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: 540px;
+        padding: 70px 15px;
+    }
+
+    .hero h1 {
+        letter-spacing: -3px;
+    }
+
+    section {
+        padding: 55px 0;
+    }
+
+    .video-grid,
+    .social-grid,
+    .music-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        display: block;
+    }
+
+    .section-title p {
+        margin-top: 8px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =======================================================
+     NAVIGATION
+     ======================================================= -->
+
+<nav>
+<div class="container nav-inner">
+
+    <a href="#" class="logo">
+        DJ <span>DANGEROUS</span>
+    </a>
+
+    <div class="nav-links">
+        <a href="#doomsday">Doomsday</a>
+        <a href="#youtube">YouTube</a>
+        <a href="#tiktok">TikTok</a>
+        <a href="#instagram">Instagram</a>
+        <a href="#music">Music</a>
+        <a href="#about">About</a>
+    </div>
+
+</div>
+</nav>
+
+
+<!-- =======================================================
+     HERO
+     ======================================================= -->
+
+<header class="hero">
+
+<div class="hero-inner">
+
+    <div class="kicker">
+        DJ • Producer • Electronic Music
+    </div>
+
+    <h1>
+        DJ <span>DANGEROUS</span>
+    </h1>
+
+    <p>
+        Raj Desai — EDM, house, electronic music,
+        remixes, mixes and new releases.
+    </p>
+
+    <div class="buttons">
+
+        <a class="button primary"
+           href="https://www.youtube.com/djdangerousmusic"
+           target="_blank"
+           rel="noopener">
+            ▶ YouTube
+        </a>
+
+        <a class="button"
+           href="https://open.spotify.com/artist/5iGBqpEQ1pG4uHHOvh7j2y"
+           target="_blank"
+           rel="noopener">
+            🎵 Spotify
+        </a>
+
+        <a class="button"
+           href="https://www.djdangerous.com/"
+           target="_blank"
+           rel="noopener">
+            🌐 Website
+        </a>
+
+    </div>
+
+</div>
+
+</header>
+
+
+<main>
+
+
+<!-- =======================================================
+     DOOMSDAY
+     ======================================================= -->
+
+<section id="doomsday">
+
+<div class="container">
+
+<div class="feature">
+
+<div class="feature-content">
+
+<div class="feature-label">
+🔥 Featured / Marvel's Avengers: Doomsday
+</div>
+
+<h3>
+DOOMSDAY
+</h3>
+
+<p>
+DJ Dangerous Raj Desai's Avengers: Doomsday
+music and video content.
+</p>
+
+<div class="buttons">
+
+<a class="button primary"
+   href="https://www.youtube.com/djdangerousmusic"
+   target="_blank"
+   rel="noopener">
+   ▶ Watch on YouTube
+</a>
+
+</div>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =======================================================
+     YOUTUBE
+     ======================================================= -->
+
+<section id="youtube">
+
+<div class="container">
+
+<div class="section-title">
+
+<div>
+<h2>▶ YouTube</h2>
+<p>DJ Dangerous Raj Desai</p>
+</div>
+
+<a class="button"
+   href="https://www.youtube.com/djdangerousmusic"
+   target="_blank"
+   rel="noopener">
+   View Channel →
+</a>
+
+</div>
+
+
+<div id="youtubeGrid" class="video-grid"></div>
+
+</div>
+
+</section>
+
+
+<!-- =======================================================
+     TIKTOK
+     ======================================================= -->
+
+<section id="tiktok">
+
+<div class="container">
+
+<div class="section-title">
+
+<div>
+<h2>♪ TikTok</h2>
+<p>@djdangerous.music</p>
+</div>
+
+<a class="button"
+   href="https://www.tiktok.com/@djdangerous.music"
+   target="_blank"
+   rel="noopener">
+   View TikTok →
+</a>
+
+</div>
+
+
+<div id="tiktokGrid" class="social-grid"></div>
+
+</div>
+
+</section>
+
+
+<!-- =======================================================
+     INSTAGRAM
+     ======================================================= -->
+
+<section id="instagram">
+
+<div class="container">
+
+<div class="section-title">
+
+<div>
+<h2>◎ Instagram</h2>
+<p>@djdangerous.music</p>
+</div>
+
+<a class="button"
+   href="https://www.instagram.com/djdangerous.music/"
+   target="_blank"
+   rel="noopener">
+   View Instagram →
+</a>
+
+</div>
+
+
+<div id="instagramGrid" class="social-grid"></div>
+
+</div>
+
+</section>
+
+
+<!-- =======================================================
+     MUSIC
+     ======================================================= -->
+
+<section id="music">
+
+<div class="container">
+
+<div class="section-title">
+
+<div>
+<h2>🎵 Music</h2>
+<p>Listen everywhere.</p>
+</div>
+
+</div>
+
+
+<div class="music-grid">
+
+<a class="music-link"
+   href="https://open.spotify.com/artist/5iGBqpEQ1pG4uHHOvh7j2y"
+   target="_blank"
+   rel="noopener">
+    Spotify →
+</a>
+
+<a class="music-link"
+   href="https://music.apple.com/"
+   target="_blank"
+   rel="noopener">
+    Apple Music →
+</a>
+
+<a class="music-link"
+   href="https://soundcloud.com/djdangerousmusic"
+   target="_blank"
+   rel="noopener">
+    SoundCloud →
+</a>
+
+<a class="music-link"
+   href="https://djdangerous.bandcamp.com/"
+   target="_blank"
+   rel="noopener">
+    Bandcamp →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =======================================================
+     ABOUT
+     ======================================================= -->
+
+<section id="about">
+
+<div class="container">
+
+<div class="section-title">
+
+<div>
+<h2>DJ Dangerous</h2>
+<p>Raj Desai</p>
+</div>
+
+</div>
+
+<div class="about">
+
+<p>
+DJ Dangerous Raj Desai delivers high-energy electronic
+music with influences spanning EDM, house, dance,
+and bass-driven production.
+</p>
+
+<p>
+Follow the latest releases, videos, mixes and social
+content through the official channels below.
+</p>
+
+</div>
+
+<div class="buttons" style="justify-content:flex-start;margin-top:25px;">
+
+<a class="button primary"
+   href="https://www.youtube.com/djdangerousmusic"
+   target="_blank"
+   rel="noopener">
+   YouTube
+</a>
+
+<a class="button"
+   href="https://www.instagram.com/djdangerous.music/"
+   target="_blank"
+   rel="noopener">
+   Instagram
+</a>
+
+<a class="button"
+   href="https://www.tiktok.com/@djdangerous.music"
+   target="_blank"
+   rel="noopener">
+   TikTok
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+<!-- =======================================================
+     FOOTER
+     ======================================================= -->
+
+<footer>
+
+<div class="container">
+
+<strong>DJ DANGEROUS RAJ DESAI</strong>
+
+<br>
+
+© <span id="year"></span> DJ Dangerous Raj Desai
+
+</div>
+
+</footer>
+
+
+<script>
+
+/* =========================================================
+   =========================================================
+
+   ⭐ WEEKLY UPDATE AREA ⭐
+
+   THIS IS THE ONLY PART YOU NEED TO EDIT.
+
+   Put YouTube video IDs here.
+
+   Example:
+
+   https://www.youtube.com/watch?v=ABC123
+
+   ID = ABC123
+
+   =========================================================
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   FEATURED / DOOMSDAY VIDEOS
+   --------------------------------------------------------- */
+
+const doomsdayVideos = [
+
+    /*
+       PUT NEW DOOMSDAY VIDEO IDS HERE.
+
+       Example:
+
+       "ABC123xyz",
+       "XYZ987abc"
+    */
+
+];
+
+
+/* ---------------------------------------------------------
+   LATEST YOUTUBE VIDEOS
+   --------------------------------------------------------- */
+
+const youtubeVideos = [
+
+    /*
+       PUT YOUR LATEST YOUTUBE VIDEO IDS HERE.
+
+       Example:
+
+       "ABC123xyz",
+       "XYZ987abc",
+       "123456789"
+    */
+
+];
+
+
+/* ---------------------------------------------------------
+   TIKTOK VIDEOS
+   --------------------------------------------------------- */
+
+const tiktokVideos = [
+
+    /*
+       TikTok video IDs.
+
+       Example:
+
+       "1234567890123456789"
+    */
+
+];
+
+
+/* ---------------------------------------------------------
+   INSTAGRAM POSTS
+   --------------------------------------------------------- */
+
+const instagramPosts = [
+
+    /*
+       Instagram shortcode.
+
+       Example:
+
+       "C123ABCxyz"
+    */
+
+];
+
+
+/* =========================================================
+   DO NOT EDIT BELOW THIS LINE
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   YOUTUBE
+   --------------------------------------------------------- */
+
+function createYouTubeCard(id, featured = false) {
+
+    const thumbnail =
+        "https://i.ytimg.com/vi/" + id + "/hqdefault.jpg";
+
+    return `
+
+        <a class="video-card"
+           href="https://www.youtube.com/watch?v=${id}"
+           target="_blank"
+           rel="noopener">
+
+            <div class="thumbnail">
+
+                <img
+                    src="${thumbnail}"
+                    alt="DJ Dangerous YouTube video"
+                    loading="lazy"
+                >
+
+                <div class="play">▶</div>
+
+                ${featured ? '<div class="badge">Featured</div>' : ''}
+
+            </div>
+
+            <div class="video-info">
+
+                <h3>
+                    DJ Dangerous Raj Desai
+                </h3>
+
+                <p>
+                    Watch on YouTube →
+                </p>
+
+            </div>
+
+        </a>
+
+    `;
+}
+
+
+/* ---------------------------------------------------------
+   RENDER YOUTUBE
+   --------------------------------------------------------- */
+
+const youtubeGrid =
+    document.getElementById("youtubeGrid");
+
+const allYouTube =
+    [...doomsdayVideos, ...youtubeVideos];
+
+if (allYouTube.length === 0) {
+
+    youtubeGrid.innerHTML = `
+
+        <div class="video-card">
+
+            <div class="thumbnail">
+
+                <div style="
+                    width:100%;
+                    height:100%;
+                    display:grid;
+                    place-items:center;
+                    color:#777;
+                    font-weight:900;
+                ">
+
+                    NEW VIDEOS COMING SOON
+
+                </div>
+
+            </div>
+
+            <div class="video-info">
+
+                <h3>
+                    DJ Dangerous on YouTube
+                </h3>
+
+                <p>
+                    Visit the channel for the latest videos.
+                </p>
+
+            </div>
+
+        </div>
+
+    `;
+
+} else {
+
+    allYouTube.forEach((id, index) => {
+
+        youtubeGrid.innerHTML +=
+            createYouTubeCard(
+                id,
+                index < doomsdayVideos.length
+            );
+
+    });
+
+}
+
+
+/* ---------------------------------------------------------
+   TIKTOK
+   --------------------------------------------------------- */
+
+const tiktokGrid =
+    document.getElementById("tiktokGrid");
+
+if (tiktokVideos.length === 0) {
+
+    tiktokGrid.innerHTML = `
+
+        <div class="social-card">
+
+            <div class="social-image">
+
+                🎵<br>
+                DJ DANGEROUS<br>
+                @djdangerous.music
+
+            </div>
+
+            <div class="social-info">
+
+                <h3>
+                    TikTok
+                </h3>
+
+                <p>
+                    Follow DJ Dangerous.
+                </p>
+
+                <a class="button"
+                   href="https://www.tiktok.com/@djdangerous.music"
+                   target="_blank"
+                   rel="noopener">
+
+                    Open TikTok →
+
+                </a>
+
+            </div>
+
+        </div>
+
+    `;
+
+} else {
+
+    tiktokVideos.forEach(id => {
+
+        tiktokGrid.innerHTML += `
+
+            <div class="social-card">
+
+                <div class="social-image">
+
+                    TikTok Video
+
+                </div>
+
+                <div class="social-info">
+
+                    <h3>
+                        DJ Dangerous
+                    </h3>
+
+                    <p>
+                        @djdangerous.music
+                    </p>
+
+                    <a class="button"
+                       href="https://www.tiktok.com/@djdangerous.music/video/${id}"
+                       target="_blank"
+                       rel="noopener">
+
+                        Watch →
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        `;
+
+    });
+
+}
+
+
+/* ---------------------------------------------------------
+   INSTAGRAM
+   --------------------------------------------------------- */
+
+const instagramGrid =
+    document.getElementById("instagramGrid");
+
+if (instagramPosts.length === 0) {
+
+    instagramGrid.innerHTML = `
+
+        <div class="social-card">
+
+            <div class="social-image">
+
+                📸<br>
+                DJ DANGEROUS<br>
+                @djdangerous.music
+
+            </div>
+
+            <div class="social-info">
+
+                <h3>
+                    Instagram
+                </h3>
+
+                <p>
+                    Latest photos and posts.
+                </p>
+
+                <a class="button"
+                   href="https://www.instagram.com/djdangerous.music/"
+                   target="_blank"
+                   rel="noopener">
+
+                    Open Instagram →
+
+                </a>
+
+            </div>
+
+        </div>
+
+    `;
+
+} else {
+
+    instagramPosts.forEach(id => {
+
+        instagramGrid.innerHTML += `
+
+            <div class="social-card">
+
+                <div class="social-image">
+
+                    Instagram Post
+
+                </div>
+
+                <div class="social-info">
+
+                    <h3>
+                        DJ Dangerous
+                    </h3>
+
+                    <p>
+                        @djdangerous.music
+                    </p>
+
+                    <a class="button"
+                       href="https://www.instagram.com/p/${id}/"
+                       target="_blank"
+                       rel="noopener">
+
+                        View Post →
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        `;
+
+    });
+
+}
+
+
+/* ---------------------------------------------------------
+   YEAR
+   --------------------------------------------------------- */
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+
+</script>
+
+</body>
+</html>

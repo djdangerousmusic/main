@@ -14,19 +14,16 @@
 <meta name="theme-color"
       content="#030303">
 
-<title>
-DJ Dangerous Raj Desai | Beautiful Disaster
-</title>
+<title>DJ Dangerous Raj Desai | Beautiful Disaster</title>
 
 
 <style>
 
 /* =========================================================
    DJ DANGEROUS
-   BEAUTIFUL DISASTER
-   CINEMATIC HOMEPAGE
+   CINEMATIC STATIC HOMEPAGE
+   HTML + CSS + VANILLA JS
    ========================================================= */
-
 
 * {
     box-sizing: border-box;
@@ -34,35 +31,24 @@ DJ Dangerous Raj Desai | Beautiful Disaster
     padding: 0;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
 
-
 body {
-
     background: #020202;
-
-    color: #ffffff;
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
 }
-
 
 a {
     color: inherit;
     text-decoration: none;
 }
 
-
-img {
-    max-width: 100%;
+button {
+    font: inherit;
 }
 
 
@@ -70,57 +56,40 @@ img {
    HERO
    ========================================================= */
 
-
 .dd-hero {
-
     position: relative;
-
     width: 100%;
-
     height: 100svh;
-
     min-height: 700px;
-
     overflow: hidden;
-
     background: #020202;
-
     isolation: isolate;
 }
 
 
 /* =========================================================
-   YOUTUBE PLAYLIST BACKGROUND
+   YOUTUBE BACKGROUND
+   IMPORTANT:
+   THIS IFRAME NEVER CHANGES DURING THE SLIDESHOW.
    ========================================================= */
 
-
 .dd-video-bg {
-
     position: absolute;
-
     inset: 0;
-
     z-index: -10;
-
     overflow: hidden;
-
     background: #000;
 }
 
-
 .dd-video-bg iframe {
-
     position: absolute;
-
     top: 50%;
     left: 50%;
 
     width: 177.78vh;
-
     height: 100vh;
 
     min-width: 100vw;
-
     min-height: 56.25vw;
 
     transform:
@@ -128,7 +97,6 @@ img {
         scale(1.08);
 
     border: 0;
-
     pointer-events: none;
 }
 
@@ -137,22 +105,17 @@ img {
    CINEMATIC OVERLAY
    ========================================================= */
 
-
 .dd-overlay {
-
     position: absolute;
-
     inset: 0;
-
     z-index: -5;
-
     pointer-events: none;
 
     background:
 
         radial-gradient(
             circle at 72% 45%,
-            rgba(255, 0, 45, .27),
+            rgba(255, 0, 45, .28),
             transparent 28%
         ),
 
@@ -177,15 +140,10 @@ img {
    RED ENERGY
    ========================================================= */
 
-
 .dd-energy {
-
     position: absolute;
-
     inset: -30%;
-
     z-index: -4;
-
     pointer-events: none;
 
     background:
@@ -212,20 +170,15 @@ img {
         alternate;
 }
 
-
 @keyframes ddEnergy {
 
     from {
-
         transform: scale(1);
-
         opacity: .5;
     }
 
     to {
-
         transform: scale(1.18);
-
         opacity: 1;
     }
 }
@@ -235,18 +188,13 @@ img {
    FILM GRAIN
    ========================================================= */
 
-
 .dd-noise {
-
     position: absolute;
-
     inset: -50%;
-
     z-index: 20;
-
     pointer-events: none;
 
-    opacity: .04;
+    opacity: .035;
 
     background-image:
 
@@ -258,7 +206,6 @@ img {
         steps(2)
         infinite;
 }
-
 
 @keyframes ddNoise {
 
@@ -288,21 +235,15 @@ img {
    SCANLINES
    ========================================================= */
 
-
 .dd-scanlines {
-
     position: absolute;
-
     inset: 0;
-
     z-index: 19;
-
     pointer-events: none;
 
     opacity: .035;
 
     background:
-
         repeating-linear-gradient(
             0deg,
             transparent 0px,
@@ -316,11 +257,8 @@ img {
    HEADER
    ========================================================= */
 
-
 .dd-header {
-
     position: absolute;
-
     top: 0;
     left: 0;
     right: 0;
@@ -328,71 +266,49 @@ img {
     z-index: 30;
 
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 
     padding: 28px 42px;
 }
 
-
 .dd-logo {
-
     font-size: 15px;
-
     font-weight: 300;
-
     letter-spacing: 4px;
-
     text-transform: uppercase;
 }
-
 
 .dd-logo strong {
     font-weight: 900;
 }
 
-
 .dd-nav {
-
     display: flex;
-
     align-items: center;
-
     gap: 30px;
 }
 
-
 .dd-nav a {
-
     position: relative;
 
     font-size: 9px;
-
     font-weight: 700;
-
     letter-spacing: 3px;
 
-    color:
-        rgba(255,255,255,.72);
+    color: rgba(255,255,255,.72);
 
     transition: .3s ease;
 }
 
-
 .dd-nav a::after {
-
     content: "";
 
     position: absolute;
-
     left: 0;
-
     bottom: -7px;
 
     width: 0;
-
     height: 1px;
 
     background: #ff1744;
@@ -400,15 +316,11 @@ img {
     transition: .3s ease;
 }
 
-
 .dd-nav a:hover {
-
     color: #fff;
 }
 
-
 .dd-nav a:hover::after {
-
     width: 100%;
 }
 
@@ -417,11 +329,8 @@ img {
    HERO CONTENT
    ========================================================= */
 
-
 .dd-content {
-
     position: relative;
-
     z-index: 15;
 
     width:
@@ -431,16 +340,32 @@ img {
         );
 
     height: 100%;
-
     margin: auto;
 
     display: flex;
-
     flex-direction: column;
-
     justify-content: center;
-
     align-items: flex-start;
+}
+
+
+/* =========================================================
+   SLIDE ANIMATION
+   ========================================================= */
+
+.dd-slide-content {
+    transition:
+        opacity .55s ease,
+        transform .7s cubic-bezier(.2,.8,.2,1),
+        filter .55s ease;
+}
+
+.dd-slide-content.is-changing {
+    opacity: 0;
+    transform:
+        translateX(-35px)
+        translateY(12px);
+    filter: blur(8px);
 }
 
 
@@ -448,32 +373,22 @@ img {
    EYEBROW
    ========================================================= */
 
-
 .dd-eyebrow {
-
     display: flex;
-
     align-items: center;
-
     gap: 12px;
 
     margin-bottom: 22px;
 
     font-size: 10px;
-
     font-weight: 700;
-
     letter-spacing: 5px;
 
-    color:
-        rgba(255,255,255,.70);
+    color: rgba(255,255,255,.70);
 }
 
-
 .dd-eyebrow span {
-
     width: 30px;
-
     height: 1px;
 
     background: #ff1744;
@@ -487,9 +402,7 @@ img {
    MAIN TITLE
    ========================================================= */
 
-
 .dd-title {
-
     font-size:
         clamp(
             70px,
@@ -515,33 +428,24 @@ img {
         both;
 }
 
-
 @keyframes ddTitleIn {
 
     from {
-
         opacity: 0;
-
         transform:
             translateY(35px);
-
         filter: blur(10px);
     }
 
     to {
-
         opacity: 1;
-
         transform:
             translateY(0);
-
         filter: blur(0);
     }
 }
 
-
 .dd-title .outline {
-
     display: block;
 
     color: transparent;
@@ -552,30 +456,87 @@ img {
 
 
 /* =========================================================
+   CINEMATIC TITLE LIGHT SWEEP
+   ========================================================= */
+
+.dd-title-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.dd-title-wrap::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -20%;
+
+    width: 2px;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent,
+            rgba(255,255,255,.95),
+            #ff1744,
+            transparent
+        );
+
+    box-shadow:
+        0 0 15px #ff1744,
+        0 0 35px rgba(255,23,68,.7);
+
+    opacity: 0;
+
+    animation:
+        ddSweep
+        5s
+        ease-in-out
+        infinite;
+}
+
+@keyframes ddSweep {
+
+    0% {
+        left: -10%;
+        opacity: 0;
+    }
+
+    12% {
+        opacity: 1;
+    }
+
+    48% {
+        left: 110%;
+        opacity: 1;
+    }
+
+    55%,
+    100% {
+        left: 110%;
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
    RELEASE STATUS
    ========================================================= */
 
-
 .dd-release {
-
     display: flex;
-
     align-items: center;
-
     gap: 11px;
 
     margin-top: 30px;
 
     font-size: 9px;
-
     letter-spacing: 3px;
 }
 
-
 .dd-release-dot {
-
     width: 7px;
-
     height: 7px;
 
     border-radius: 50%;
@@ -591,28 +552,20 @@ img {
         infinite;
 }
 
-
 @keyframes ddPulse {
 
     50% {
-
         transform: scale(.55);
-
         opacity: .35;
     }
 }
 
-
 .dd-release strong {
-
     color: #ff1744;
 }
 
-
 .dd-release-line {
-
     width: 35px;
-
     height: 1px;
 
     background:
@@ -624,26 +577,18 @@ img {
    TAGLINE
    ========================================================= */
 
-
 .dd-tagline {
-
     margin-top: 20px;
 
     font-size: 21px;
-
     line-height: 1.2;
 
     letter-spacing: 2px;
-
     font-weight: 300;
 }
 
-
 .dd-tagline strong {
-
     font-weight: 900;
-
-    color: #fff;
 }
 
 
@@ -651,15 +596,12 @@ img {
    DESCRIPTION
    ========================================================= */
 
-
 .dd-description {
-
     max-width: 500px;
 
     margin-top: 17px;
 
     font-size: 14px;
-
     line-height: 1.65;
 
     color:
@@ -671,27 +613,18 @@ img {
    BUTTONS
    ========================================================= */
 
-
 .dd-buttons {
-
     display: flex;
-
     flex-wrap: wrap;
-
     gap: 12px;
 
     margin-top: 27px;
 }
 
-
 .dd-button {
-
     display: inline-flex;
-
     align-items: center;
-
     justify-content: center;
-
     gap: 10px;
 
     min-width: 185px;
@@ -699,17 +632,13 @@ img {
     padding: 16px 24px;
 
     font-size: 10px;
-
     font-weight: 900;
-
     letter-spacing: 2px;
 
     transition: .3s ease;
 }
 
-
 .dd-button-primary {
-
     color: #fff;
 
     background: #ff1744;
@@ -719,11 +648,7 @@ img {
         rgba(255,23,68,.30);
 }
 
-
 .dd-button-primary:hover {
-
-    color: #fff;
-
     background: #ff3158;
 
     transform:
@@ -734,9 +659,7 @@ img {
         rgba(255,23,68,.50);
 }
 
-
 .dd-button-secondary {
-
     color: #fff;
 
     border:
@@ -750,9 +673,7 @@ img {
         blur(10px);
 }
 
-
 .dd-button-secondary:hover {
-
     color: #000;
 
     background: #fff;
@@ -768,13 +689,10 @@ img {
    UPCOMING RELEASE
    ========================================================= */
 
-
 .dd-upcoming {
-
     position: absolute;
 
     right: 42px;
-
     bottom: 125px;
 
     z-index: 25;
@@ -801,66 +719,47 @@ img {
         rgba(255,0,40,.08);
 }
 
-
 .dd-upcoming-label {
-
     margin-bottom: 12px;
 
     font-size: 8px;
-
     font-weight: 700;
-
     letter-spacing: 3px;
 
     color:
         rgba(255,255,255,.45);
 }
 
-
 .dd-upcoming-title {
-
     font-size: 17px;
-
     line-height: 1.05;
 
     letter-spacing: 1px;
-
     font-weight: 300;
 
     text-transform: uppercase;
 }
 
-
 .dd-upcoming-title strong {
-
     font-weight: 900;
 }
 
-
 .dd-coming {
-
     display: flex;
-
     align-items: center;
-
     gap: 8px;
 
     margin-top: 15px;
 
     font-size: 8px;
-
     font-weight: 900;
-
     letter-spacing: 2px;
 
     color: #ff1744;
 }
 
-
 .dd-coming span {
-
     width: 5px;
-
     height: 5px;
 
     border-radius: 50%;
@@ -876,13 +775,10 @@ img {
    GIANT YEAR
    ========================================================= */
 
-
 .dd-year {
-
     position: absolute;
 
     right: -10px;
-
     bottom: 35px;
 
     z-index: 2;
@@ -906,7 +802,6 @@ img {
         1px rgba(255,255,255,.07);
 
     pointer-events: none;
-
     user-select: none;
 }
 
@@ -915,48 +810,34 @@ img {
    BOTTOM BAR
    ========================================================= */
 
-
 .dd-bottom {
-
     position: absolute;
 
     left: 42px;
-
     right: 42px;
-
     bottom: 28px;
 
     z-index: 30;
 
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 }
 
-
 .dd-scroll {
-
     display: flex;
-
     align-items: center;
-
     gap: 12px;
 
     font-size: 8px;
-
     letter-spacing: 3px;
 
     color:
         rgba(255,255,255,.5);
 }
 
-
 .dd-scroll-line {
-
     width: 45px;
-
     height: 1px;
 
     background:
@@ -968,38 +849,28 @@ img {
    NOW PLAYING
    ========================================================= */
 
-
 .dd-now-playing {
-
     display: flex;
-
     align-items: center;
-
     gap: 14px;
 }
 
-
 .dd-now-playing small {
-
     display: block;
 
     font-size: 7px;
-
     letter-spacing: 2px;
 
     color:
         rgba(255,255,255,.45);
 }
 
-
 .dd-now-playing strong {
-
     display: block;
 
     margin-top: 5px;
 
     font-size: 8px;
-
     letter-spacing: 2px;
 }
 
@@ -1008,21 +879,15 @@ img {
    EQUALIZER
    ========================================================= */
 
-
 .dd-eq {
-
     display: flex;
-
     align-items: center;
-
     gap: 3px;
 
     height: 25px;
 }
 
-
 .dd-eq i {
-
     display: block;
 
     width: 3px;
@@ -1036,46 +901,30 @@ img {
         ease-in-out;
 }
 
-
 .dd-eq i:nth-child(1) {
-
     height: 9px;
-
     animation-delay: -.2s;
 }
 
-
 .dd-eq i:nth-child(2) {
-
     height: 19px;
-
     animation-delay: -.5s;
 }
 
-
 .dd-eq i:nth-child(3) {
-
     height: 13px;
-
     animation-delay: -.1s;
 }
 
-
 .dd-eq i:nth-child(4) {
-
     height: 22px;
-
     animation-delay: -.4s;
 }
 
-
 .dd-eq i:nth-child(5) {
-
     height: 8px;
-
     animation-delay: -.7s;
 }
-
 
 @keyframes ddEqualizer {
 
@@ -1094,9 +943,7 @@ img {
    CONTENT SECTIONS
    ========================================================= */
 
-
 .dd-section {
-
     position: relative;
 
     padding:
@@ -1105,24 +952,18 @@ img {
     background: #050505;
 }
 
-
 .dd-section:nth-of-type(even) {
-
     background: #030303;
 }
 
-
 .dd-section-title {
-
     max-width: 1100px;
 
     margin:
         0 auto 55px;
 }
 
-
 .dd-section-label {
-
     display: block;
 
     margin-bottom: 15px;
@@ -1130,15 +971,11 @@ img {
     color: #ff1744;
 
     font-size: 9px;
-
     font-weight: 900;
-
     letter-spacing: 4px;
 }
 
-
 .dd-section-title h2 {
-
     font-size:
         clamp(
             45px,
@@ -1153,9 +990,7 @@ img {
     text-transform: uppercase;
 }
 
-
 .dd-section-title h2 span {
-
     color: transparent;
 
     -webkit-text-stroke:
@@ -1164,12 +999,10 @@ img {
 
 
 /* =========================================================
-   BEAUTIFUL DISASTER RELEASE CARD
+   RELEASE CARD
    ========================================================= */
 
-
 .dd-release-card {
-
     display: grid;
 
     grid-template-columns:
@@ -1188,15 +1021,11 @@ img {
     overflow: hidden;
 }
 
-
 .dd-release-art {
-
     min-height: 480px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     background:
@@ -1214,17 +1043,12 @@ img {
         );
 }
 
-
 .dd-release-art-inner {
-
     width: 75%;
-
     aspect-ratio: 1;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     border:
@@ -1239,9 +1063,7 @@ img {
         rotate(-4deg);
 }
 
-
 .dd-release-art-inner span {
-
     font-size:
         clamp(
             35px,
@@ -1250,50 +1072,36 @@ img {
         );
 
     font-weight: 900;
-
     line-height: .8;
 
     text-align: center;
-
     text-transform: uppercase;
 
     transform:
         rotate(4deg);
 }
 
-
 .dd-release-art-inner span strong {
-
     color: #ff1744;
 }
 
-
 .dd-release-info {
-
     display: flex;
-
     flex-direction: column;
-
     justify-content: center;
 
     padding: 60px;
 }
 
-
 .dd-release-info small {
-
     color: #ff1744;
 
     font-size: 9px;
-
     font-weight: 900;
-
     letter-spacing: 3px;
 }
 
-
 .dd-release-info h3 {
-
     margin-top: 20px;
 
     font-size:
@@ -1304,15 +1112,12 @@ img {
         );
 
     line-height: .9;
-
     letter-spacing: -3px;
 
     text-transform: uppercase;
 }
 
-
 .dd-release-info p {
-
     max-width: 450px;
 
     margin-top: 25px;
@@ -1328,13 +1133,10 @@ img {
    VIDEO SECTION
    ========================================================= */
 
-
 .dd-video-container {
-
     position: relative;
 
     width: 100%;
-
     max-width: 1200px;
 
     margin: auto;
@@ -1354,68 +1156,46 @@ img {
         rgba(0,0,0,.5);
 }
 
-
 .dd-video-container iframe {
-
     position: absolute;
-
     inset: 0;
 
     width: 100%;
-
     height: 100%;
 
     border: 0;
 }
 
-
-/* =========================================================
-   VIDEO LINK
-   ========================================================= */
-
-
 .dd-playlist-link {
-
     display: flex;
-
     justify-content: center;
 
     margin-top: 25px;
 }
 
-
 .dd-playlist-link a {
-
     color:
         rgba(255,255,255,.65);
 
     font-size: 9px;
-
     font-weight: 900;
-
     letter-spacing: 3px;
 
     transition: .3s ease;
 }
 
-
 .dd-playlist-link a:hover {
-
     color: #ff1744;
 }
 
 
 /* =========================================================
-   MUSIC PLATFORMS
+   PLATFORMS / SOCIAL
    ========================================================= */
 
-
 .dd-platforms {
-
     display: flex;
-
     flex-wrap: wrap;
-
     gap: 12px;
 
     max-width: 1200px;
@@ -1423,13 +1203,9 @@ img {
     margin: auto;
 }
 
-
 .dd-platform {
-
     display: inline-flex;
-
     align-items: center;
-
     justify-content: center;
 
     min-width: 180px;
@@ -1444,37 +1220,28 @@ img {
         rgba(255,255,255,.025);
 
     font-size: 9px;
-
     font-weight: 900;
-
     letter-spacing: 2px;
 
     transition: .3s ease;
 }
 
-
 .dd-platform:hover {
-
     color: #000;
-
     background: #fff;
 
     transform:
         translateY(-3px);
 }
 
-
 .dd-platform-featured {
-
     border-color:
         rgba(255,23,68,.55);
 
     color: #ff1744;
 }
 
-
 .dd-platform-featured:hover {
-
     color: #fff;
 
     background: #ff1744;
@@ -1484,12 +1251,35 @@ img {
 
 
 /* =========================================================
+   COMING SOON BUTTON
+   ========================================================= */
+
+.dd-platform-disabled {
+    color:
+        rgba(255,255,255,.25);
+
+    border-color:
+        rgba(255,255,255,.08);
+
+    cursor: default;
+}
+
+.dd-platform-disabled:hover {
+    color:
+        rgba(255,255,255,.25);
+
+    background:
+        rgba(255,255,255,.025);
+
+    transform: none;
+}
+
+
+/* =========================================================
    FOOTER
    ========================================================= */
 
-
 .dd-footer {
-
     padding:
         55px 7vw;
 
@@ -1502,27 +1292,19 @@ img {
     text-align: center;
 }
 
-
 .dd-footer-logo {
-
     font-size: 18px;
-
     letter-spacing: 4px;
 }
 
-
 .dd-footer-logo strong {
-
     font-weight: 900;
 }
 
-
 .dd-footer p {
-
     margin-top: 12px;
 
     font-size: 9px;
-
     letter-spacing: 2px;
 
     color:
@@ -1534,38 +1316,27 @@ img {
    TABLET
    ========================================================= */
 
-
 @media (max-width: 950px) {
 
     .dd-nav {
-
         gap: 18px;
     }
 
-
     .dd-content {
-
         width:
             calc(100% - 60px);
     }
 
-
     .dd-upcoming {
-
         right: 25px;
-
         width: 230px;
     }
 
-
     .dd-release-card {
-
         grid-template-columns: 1fr;
     }
 
-
     .dd-release-art {
-
         min-height: 400px;
     }
 }
@@ -1575,38 +1346,27 @@ img {
    MOBILE
    ========================================================= */
 
-
 @media (max-width: 650px) {
 
     .dd-hero {
-
         min-height: 720px;
     }
 
-
     .dd-header {
-
         padding:
             22px 20px;
     }
 
-
     .dd-logo {
-
         font-size: 11px;
-
         letter-spacing: 2px;
     }
 
-
     .dd-nav {
-
         display: none;
     }
 
-
     .dd-content {
-
         width:
             calc(100% - 36px);
 
@@ -1617,25 +1377,18 @@ img {
             105px;
     }
 
-
     .dd-eyebrow {
-
         font-size: 8px;
-
         letter-spacing: 3px;
 
         margin-bottom: 16px;
     }
 
-
     .dd-eyebrow span {
-
         width: 20px;
     }
 
-
     .dd-title {
-
         font-size:
             clamp(
                 52px,
@@ -1646,146 +1399,95 @@ img {
         letter-spacing: -5px;
     }
 
-
     .dd-title .outline {
-
         -webkit-text-stroke:
             1px #fff;
     }
 
-
     .dd-release {
-
         margin-top: 22px;
 
         font-size: 8px;
-
         letter-spacing: 2px;
     }
 
-
     .dd-tagline {
-
         font-size: 16px;
-
         letter-spacing: 1px;
     }
 
-
     .dd-description {
-
         font-size: 13px;
-
         margin-top: 15px;
     }
 
-
     .dd-buttons {
-
         width: 100%;
 
         flex-direction: column;
-
         gap: 8px;
 
         margin-top: 22px;
     }
 
-
     .dd-button {
-
         width: 100%;
-
         min-width: 0;
     }
 
-
     .dd-upcoming {
-
         display: none;
     }
 
-
     .dd-year {
-
         font-size: 130px;
 
         right: -5px;
-
         bottom: 80px;
     }
 
-
     .dd-bottom {
-
         left: 18px;
-
         right: 18px;
-
         bottom: 20px;
     }
 
-
     .dd-scroll {
-
         display: none;
     }
 
-
-    .dd-now-playing {
-
-        font-size: 7px;
-    }
-
-
     .dd-section {
-
         padding:
             75px 20px;
     }
 
-
     .dd-section-title {
-
         margin-bottom: 35px;
     }
 
-
     .dd-section-title h2 {
-
         font-size: 48px;
-
         letter-spacing: -3px;
     }
 
-
     .dd-release-art {
-
         min-height: 300px;
     }
 
-
     .dd-release-info {
-
         padding:
             35px 25px;
     }
 
-
     .dd-release-info h3 {
-
         font-size: 42px;
     }
 
-
     .dd-platforms {
-
         flex-direction: column;
     }
 
-
     .dd-platform {
-
         width: 100%;
     }
 }
@@ -1795,25 +1497,18 @@ img {
    SMALL PHONES
    ========================================================= */
 
-
 @media (max-width: 380px) {
 
     .dd-title {
-
         font-size: 50px;
-
         letter-spacing: -4px;
     }
 
-
     .dd-tagline {
-
         font-size: 14px;
     }
 
-
     .dd-description {
-
         font-size: 12px;
     }
 }
@@ -1823,18 +1518,19 @@ img {
    REDUCED MOTION
    ========================================================= */
 
-
 @media (prefers-reduced-motion: reduce) {
 
     *,
     *::before,
     *::after {
-
         animation-duration:
             .01ms !important;
 
         animation-iteration-count:
             1 !important;
+
+        transition-duration:
+            .01ms !important;
 
         scroll-behavior:
             auto !important;
@@ -1853,12 +1549,17 @@ img {
      HERO
      ======================================================== -->
 
-
-<section class="dd-hero"
-         id="home">
+<section class="dd-hero" id="home">
 
 
-    <!-- YOUR YOUTUBE PLAYLIST -->
+    <!--
+        IMPORTANT:
+
+        This is ONE YouTube playlist iframe.
+
+        The slideshow below NEVER reloads or replaces this iframe.
+        This keeps the hero much safer on phones and older browsers.
+    -->
 
     <div class="dd-video-bg">
 
@@ -1898,11 +1599,11 @@ img {
     <div class="dd-scanlines"></div>
 
 
-    <!-- HEADER -->
-
+    <!-- ====================================================
+         HEADER
+         ==================================================== -->
 
     <header class="dd-header">
-
 
         <a
             href="https://djdangerous.com/"
@@ -1915,13 +1616,9 @@ img {
 
         <nav class="dd-nav">
 
-
             <a href="#music">
                 MUSIC
             </a>
-
-
-            <!-- DIRECT YOUTUBE PLAYLIST -->
 
             <a
                 href="https://youtube.com/playlist?list=PLxiLbYhSxJQIqEHc8F4yWGGNqRIntKDvR&si=lY4z4zAVjqaS2aDw"
@@ -1932,161 +1629,160 @@ img {
 
             </a>
 
-
             <a href="#social">
                 SOCIAL
             </a>
-
 
             <a href="#stores">
                 STORES
             </a>
 
-
         </nav>
-
 
     </header>
 
 
-    <!-- HERO CONTENT -->
-
+    <!-- ====================================================
+         HERO CONTENT
+         ==================================================== -->
 
     <main class="dd-content">
 
+        <div
+            class="dd-slide-content"
+            id="ddSlideContent">
 
-        <div class="dd-eyebrow">
 
-            <span></span>
+            <div class="dd-eyebrow">
 
-            DJ DANGEROUS RAJ DESAI
+                <span></span>
 
-            <span></span>
+                <span id="ddArtist">
+                    DJ DANGEROUS RAJ DESAI
+                </span>
+
+                <span></span>
+
+            </div>
+
+
+            <div class="dd-title-wrap">
+
+                <h1 class="dd-title">
+
+                    <span id="ddTitleMain">
+                        BEAUTIFUL
+                    </span>
+
+                    <span
+                        class="outline"
+                        id="ddTitleSecond">
+
+                        DISASTER
+
+                    </span>
+
+                </h1>
+
+            </div>
+
+
+            <div class="dd-release">
+
+                <span class="dd-release-dot"></span>
+
+                <strong id="ddStatus">
+                    OUT NOW
+                </strong>
+
+                <span class="dd-release-line"></span>
+
+                <span id="ddYear">
+                    2026
+                </span>
+
+            </div>
+
+
+            <p class="dd-tagline">
+
+                <strong id="ddTaglineStrong">
+                    TURN IT UP.
+                </strong>
+
+                <br>
+
+                <span id="ddTagline">
+                    LET THE WORLD FALL AWAY.
+                </span>
+
+            </p>
+
+
+            <p
+                class="dd-description"
+                id="ddDescription">
+
+                The latest release from
+                DJ Dangerous Raj Desai.
+
+                Discover the music, videos and
+                sounds of DJ Dangerous.
+
+            </p>
+
+
+            <div
+                class="dd-buttons"
+                id="ddHeroButtons">
+
+
+                <a
+                    href="https://djdangerous.bandcamp.com/track/beautiful-disaster-2"
+                    target="_blank"
+                    rel="noopener"
+                    class="dd-button dd-button-primary">
+
+                    ▶ &nbsp; BANDCAMP
+
+                </a>
+
+
+                <a
+                    href="https://music.apple.com/us/artist/dj-dangerous-raj-desai/477691086"
+                    target="_blank"
+                    rel="noopener"
+                    class="dd-button dd-button-secondary">
+
+                     &nbsp; APPLE MUSIC
+
+                </a>
+
+
+                <a
+                    href="https://youtube.com/playlist?list=PLxiLbYhSxJQIqEHc8F4yWGGNqRIntKDvR&si=lY4z4zAVjqaS2aDw"
+                    target="_blank"
+                    rel="noopener"
+                    class="dd-button dd-button-secondary">
+
+                    ▶ &nbsp; WATCH VIDEOS
+
+                </a>
+
+
+            </div>
+
 
         </div>
-
-
-        <h1 class="dd-title">
-
-            BEAUTIFUL
-
-            <span class="outline">
-                DISASTER
-            </span>
-
-        </h1>
-
-
-        <div class="dd-release">
-
-            <span class="dd-release-dot"></span>
-
-            <strong>
-                OUT NOW
-            </strong>
-
-            <span class="dd-release-line"></span>
-
-            2026
-
-        </div>
-
-
-        <p class="dd-tagline">
-
-            <strong>
-                TURN IT UP.
-            </strong>
-
-            <br>
-
-            LET THE WORLD FALL AWAY.
-
-        </p>
-
-
-        <p class="dd-description">
-
-            The latest release from
-            DJ Dangerous Raj Desai.
-
-            Discover the music, videos and
-            sounds of DJ Dangerous.
-
-        </p>
-
-
-        <div class="dd-buttons">
-
-
-            <!-- DIRECT BEAUTIFUL DISASTER BANDCAMP TRACK -->
-
-
-            <a
-
-                href="https://djdangerous.bandcamp.com/track/beautiful-disaster-2"
-
-                target="_blank"
-
-                rel="noopener"
-
-                class="dd-button dd-button-primary">
-
-                ▶ &nbsp;
-                BANDCAMP
-
-            </a>
-
-
-            <!-- APPLE MUSIC ARTIST PAGE -->
-
-
-            <a
-
-                href="https://music.apple.com/us/artist/dj-dangerous-raj-desai/477691086"
-
-                target="_blank"
-
-                rel="noopener"
-
-                class="dd-button dd-button-secondary">
-
-                 &nbsp;
-                APPLE MUSIC
-
-            </a>
-
-
-            <!-- YOUTUBE PLAYLIST -->
-
-
-            <a
-
-                href="https://youtube.com/playlist?list=PLxiLbYhSxJQIqEHc8F4yWGGNqRIntKDvR&si=lY4z4zAVjqaS2aDw"
-
-                target="_blank"
-
-                rel="noopener"
-
-                class="dd-button dd-button-secondary">
-
-                ▶ &nbsp;
-                WATCH VIDEOS
-
-            </a>
-
-
-        </div>
-
 
     </main>
 
 
-    <!-- UPCOMING RELEASE -->
-
+    <!-- ====================================================
+         NEXT RELEASE
+         ==================================================== -->
 
     <aside class="dd-upcoming">
-
 
         <div class="dd-upcoming-label">
 
@@ -2116,7 +1812,6 @@ img {
 
         </div>
 
-
     </aside>
 
 
@@ -2125,11 +1820,11 @@ img {
     </div>
 
 
-    <!-- BOTTOM BAR -->
-
+    <!-- ====================================================
+         BOTTOM BAR
+         ==================================================== -->
 
     <div class="dd-bottom">
-
 
         <div class="dd-scroll">
 
@@ -2141,7 +1836,6 @@ img {
 
 
         <div class="dd-now-playing">
-
 
             <div class="dd-eq">
 
@@ -2160,15 +1854,13 @@ img {
                     DJ DANGEROUS
                 </small>
 
-                <strong>
+                <strong id="ddNowPlaying">
                     BEAUTIFUL DISASTER
                 </strong>
 
             </div>
 
-
         </div>
-
 
     </div>
 
@@ -2181,7 +1873,6 @@ img {
      MUSIC
      ======================================================== -->
 
-
 <section
     class="dd-section"
     id="music">
@@ -2189,13 +1880,9 @@ img {
 
     <div class="dd-section-title">
 
-
         <span class="dd-section-label">
-
             LATEST RELEASE
-
         </span>
-
 
         <h2>
 
@@ -2207,21 +1894,15 @@ img {
 
         </h2>
 
-
     </div>
 
 
     <div class="dd-release-card">
 
 
-        <!-- RELEASE ART -->
-
-
         <div class="dd-release-art">
 
-
             <div class="dd-release-art-inner">
-
 
                 <span>
 
@@ -2235,26 +1916,17 @@ img {
 
                 </span>
 
-
             </div>
-
 
         </div>
 
 
-        <!-- RELEASE INFO -->
-
-
         <div class="dd-release-info">
-
 
             <small>
 
                 DJ DANGEROUS RAJ DESAI
-
-                ·
-
-                SINGLE · 2026
+                · SINGLE · 2026
 
             </small>
 
@@ -2283,15 +1955,10 @@ img {
 
             <div class="dd-buttons">
 
-
                 <a
-
                     href="https://djdangerous.bandcamp.com/track/beautiful-disaster-2"
-
                     target="_blank"
-
                     rel="noopener"
-
                     class="dd-button dd-button-primary">
 
                     LISTEN ON BANDCAMP
@@ -2300,28 +1967,20 @@ img {
 
 
                 <a
-
                     href="https://music.apple.com/us/artist/dj-dangerous-raj-desai/477691086"
-
                     target="_blank"
-
                     rel="noopener"
-
                     class="dd-button dd-button-secondary">
 
                     APPLE MUSIC
 
                 </a>
 
-
             </div>
-
 
         </div>
 
-
     </div>
-
 
 </section>
 
@@ -2331,7 +1990,6 @@ img {
      VIDEOS
      ======================================================== -->
 
-
 <section
     class="dd-section"
     id="videos">
@@ -2339,13 +1997,9 @@ img {
 
     <div class="dd-section-title">
 
-
         <span class="dd-section-label">
-
             WATCH
-
         </span>
-
 
         <h2>
 
@@ -2357,71 +2011,42 @@ img {
 
         </h2>
 
-
     </div>
 
 
-    <!-- SAME YOUTUBE PLAYLIST -->
-
-
     <div class="dd-video-container">
-
-
-        <iframe
-
-            src="https://www.youtube.com/embed/videoseries?list=PLxiLbYhSxJQIqEHc8F4yWGGNqRIntKDvR"
-
-            title="DJ Dangerous Raj Desai Official YouTube Playlist"
-
-            frameborder="0"
-
-            allow="
-                accelerometer;
-                autoplay;
-                clipboard-write;
-                encrypted-media;
-                gyroscope;
-                picture-in-picture;
-                web-share
-            "
-
-            referrerpolicy="strict-origin-when-cross-origin"
-
-            allowfullscreen>
-
-        </iframe>
-
+ <iframe
+        src="https://www.youtube.com/embed/videoseries?si=n3wVGnnrr2AMkMlf&list=PLxiLbYhSxJQIqEHc8F4yWGGNqRIntKDvR&autoplay=1&mute=1"
+        title="DJ Dangerous Raj Desai Official Videos"
+        frameborder="0"
+        allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
 
     </div>
 
 
     <div class="dd-playlist-link">
 
-
         <a
-
             href="https://youtube.com/playlist?list=PLxiLbYhSxJQIqEHc8F4yWGGNqRIntKDvR&si=lY4z4zAVjqaS2aDw"
-
             target="_blank"
-
             rel="noopener">
 
             OPEN THE FULL DJ DANGEROUS PLAYLIST ↗
 
         </a>
 
-
     </div>
-
 
 </section>
 
 
 
 <!-- ========================================================
-     STORES / STREAMING
+     STORES
      ======================================================== -->
-
 
 <section
     class="dd-section"
@@ -2430,13 +2055,9 @@ img {
 
     <div class="dd-section-title">
 
-
         <span class="dd-section-label">
-
             MUSIC EVERYWHERE
-
         </span>
-
 
         <h2>
 
@@ -2448,24 +2069,16 @@ img {
 
         </h2>
 
-
     </div>
 
 
     <div class="dd-platforms">
 
 
-        <!-- BANDCAMP -->
-
-
         <a
-
             href="https://djdangerous.bandcamp.com/track/beautiful-disaster-2"
-
             target="_blank"
-
             rel="noopener"
-
             class="dd-platform dd-platform-featured">
 
             BANDCAMP
@@ -2473,17 +2086,10 @@ img {
         </a>
 
 
-        <!-- APPLE MUSIC -->
-
-
         <a
-
             href="https://music.apple.com/us/artist/dj-dangerous-raj-desai/477691086"
-
             target="_blank"
-
             rel="noopener"
-
             class="dd-platform">
 
             APPLE MUSIC
@@ -2491,18 +2097,10 @@ img {
         </a>
 
 
-        <!-- SPOTIFY -->
-
-        <!-- Replace this with your actual Spotify artist URL -->
-
         <a
-
             href="https://open.spotify.com/"
-
             target="_blank"
-
             rel="noopener"
-
             class="dd-platform">
 
             SPOTIFY
@@ -2510,18 +2108,10 @@ img {
         </a>
 
 
-        <!-- SOUNDCLOUD -->
-
-        <!-- Replace with your actual SoundCloud URL -->
-
         <a
-
             href="https://soundcloud.com/"
-
             target="_blank"
-
             rel="noopener"
-
             class="dd-platform">
 
             SOUNDCLOUD
@@ -2529,16 +2119,10 @@ img {
         </a>
 
 
-        <!-- AMAZON MUSIC -->
-
         <a
-
             href="https://music.amazon.com/"
-
             target="_blank"
-
             rel="noopener"
-
             class="dd-platform">
 
             AMAZON MUSIC
@@ -2546,16 +2130,10 @@ img {
         </a>
 
 
-        <!-- DEEZER -->
-
         <a
-
             href="https://www.deezer.com/"
-
             target="_blank"
-
             rel="noopener"
-
             class="dd-platform">
 
             DEEZER
@@ -2563,17 +2141,10 @@ img {
         </a>
 
 
-        <!-- YOUTUBE PLAYLIST -->
-
-
         <a
-
             href="https://youtube.com/playlist?list=PLxiLbYhSxJQIqEHc8F4yWGGNqRIntKDvR&si=lY4z4zAVjqaS2aDw"
-
             target="_blank"
-
             rel="noopener"
-
             class="dd-platform">
 
             YOUTUBE
@@ -2581,16 +2152,10 @@ img {
         </a>
 
 
-        <!-- JUNO -->
-
         <a
-
             href="https://www.junodownload.com/"
-
             target="_blank"
-
             rel="noopener"
-
             class="dd-platform">
 
             JUNO DOWNLOAD
@@ -2598,16 +2163,10 @@ img {
         </a>
 
 
-        <!-- SHAZAM -->
-
         <a
-
             href="https://www.shazam.com/"
-
             target="_blank"
-
             rel="noopener"
-
             class="dd-platform">
 
             SHAZAM
@@ -2615,25 +2174,17 @@ img {
         </a>
 
 
-        <!-- PANDORA -->
-
         <a
-
             href="https://www.pandora.com/"
-
             target="_blank"
-
             rel="noopener"
-
             class="dd-platform">
 
             PANDORA
 
         </a>
 
-
     </div>
-
 
 </section>
 
@@ -2643,7 +2194,6 @@ img {
      SOCIAL
      ======================================================== -->
 
-
 <section
     class="dd-section"
     id="social">
@@ -2651,13 +2201,9 @@ img {
 
     <div class="dd-section-title">
 
-
         <span class="dd-section-label">
-
             CONNECT
-
         </span>
-
 
         <h2>
 
@@ -2669,26 +2215,16 @@ img {
 
         </h2>
 
-
     </div>
 
 
     <div class="dd-platforms">
 
 
-        <!--
-        Add your actual social URLs here.
-        -->
-
-
         <a
-
             href="https://www.youtube.com/"
-
             target="_blank"
-
             rel="noopener"
-
             class="dd-platform">
 
             YOUTUBE
@@ -2697,13 +2233,9 @@ img {
 
 
         <a
-
             href="https://www.instagram.com/"
-
             target="_blank"
-
             rel="noopener"
-
             class="dd-platform">
 
             INSTAGRAM
@@ -2712,13 +2244,9 @@ img {
 
 
         <a
-
             href="https://www.facebook.com/"
-
             target="_blank"
-
             rel="noopener"
-
             class="dd-platform">
 
             FACEBOOK
@@ -2727,22 +2255,16 @@ img {
 
 
         <a
-
             href="https://www.tiktok.com/"
-
             target="_blank"
-
             rel="noopener"
-
             class="dd-platform">
 
             TIKTOK
 
         </a>
 
-
     </div>
-
 
 </section>
 
@@ -2752,9 +2274,7 @@ img {
      FOOTER
      ======================================================== -->
 
-
 <footer class="dd-footer">
-
 
     <div class="dd-footer-logo">
 
@@ -2766,10 +2286,7 @@ img {
     <p>
 
         DJ DANGEROUS RAJ DESAI
-
-        ·
-
-        DJ · PRODUCER · ELECTRONIC MUSIC
+        · DJ/PRODUCER · PRODUCER · MUSIC ARTIST
 
     </p>
 
@@ -2777,14 +2294,516 @@ img {
     <p>
 
         © 2026 DJ Dangerous Raj Desai.
-
         All rights reserved.
 
     </p>
 
-
 </footer>
 
+
+
+<!-- ========================================================
+     RELEASE SLIDESHOW ENGINE
+
+     IMPORTANT:
+
+     • Vanilla JavaScript only
+     • No libraries
+     • No YouTube iframe manipulation
+     • Changes every 5 seconds
+     • Easy to add future releases
+     ======================================================== -->
+
+<script>
+
+(function () {
+
+    "use strict";
+
+
+    /*
+     * ======================================================
+     * RELEASE DATA
+     *
+     * ADD FUTURE RELEASES HERE.
+     *
+     * The first release is the featured release.
+     * Future releases can be added when ready.
+     * ======================================================
+     */
+
+    var releases = [
+
+        {
+            main: "BEAUTIFUL",
+            second: "DISASTER",
+
+            status: "OUT NOW",
+
+            year: "2026",
+
+            taglineStrong: "TURN IT UP.",
+
+            tagline:
+                "LET THE WORLD FALL AWAY.",
+
+            description:
+                "The latest release from DJ Dangerous Raj Desai. Discover the music, videos and sounds of DJ Dangerous.",
+
+            nowPlaying:
+                "BEAUTIFUL DISASTER",
+
+            buttons: [
+
+                {
+                    text: "▶  BANDCAMP",
+                    url:
+                        "https://djdangerous.bandcamp.com/track/beautiful-disaster-2",
+                    primary: true
+                },
+
+                {
+                    text: "  APPLE MUSIC",
+                    url:
+                        "https://music.apple.com/us/artist/dj-dangerous-raj-desai/477691086",
+                    primary: false
+                },
+
+                {
+                    text: "▶  WATCH VIDEOS",
+                    url:
+                        "https://youtube.com/playlist?list=PLxiLbYhSxJQIqEHc8F4yWGGNqRIntKDvR&si=lY4z4zAVjqaS2aDw",
+                    primary: false
+                }
+
+            ]
+
+        },
+   
+
+        /*
+         * ==================================================
+         * FUTURE RELEASE
+         *
+         * This can be enabled/modified when appropriate.
+         * It does NOT imply that the song is released.
+         * ==================================================
+         */
+
+        {
+            main: "ECHOES IN",
+            second: "THE BROKEN SKY",
+
+            status: "COMING SOON",
+
+            year: "2026",
+
+            taglineStrong:
+                "THE NEXT CHAPTER.",
+
+            tagline:
+                "THE SKY IS ABOUT TO BREAK.",
+
+            description:
+                "A new DJ Dangerous release is coming soon.",
+
+            nowPlaying:
+                "ECHOES IN THE BROKEN SKY",
+
+            buttons: [
+
+                {
+                    text: "COMING SOON",
+                    url: "#",
+                    primary: true
+                },
+
+                {
+                    text: "WATCH VIDEOS",
+                    url:
+                        "https://youtube.com/playlist?list=PLxiLbYhSxJQIqEHc8F4yWGGNqRIntKDvR&si=lY4z4zAVjqaS2aDw",
+                    primary: false
+                }
+
+            ]
+
+        },
+
+         {
+            main: "moo",
+            second: "DISASTER",
+
+            status: "OUT NOW",
+
+            year: "2026",
+
+            taglineStrong: "TURN IT UP.",
+
+            tagline:
+                "LET THE WORLD FALL AWAY.",
+
+            description:
+                "The latest release from DJ Dangerous Raj Desai. Discover the music, videos and sounds of DJ Dangerous.",
+
+            nowPlaying:
+                "BEAUTIFUL DISASTER",
+
+            buttons: [
+
+                {
+                    text: "▶  BANDCAMP",
+                    url:
+                        "https://djdangerous.bandcamp.com/track/beautiful-disaster-2",
+                    primary: true
+                },
+
+                {
+                    text: "  APPLE MUSIC",
+                    url:
+                        "https://music.apple.com/us/artist/dj-dangerous-raj-desai/477691086",
+                    primary: false
+                },
+
+                {
+                    text: "▶  WATCH VIDEOS",
+                    url:
+                        "https://youtube.com/playlist?list=PLxiLbYhSxJQIqEHc8F4yWGGNqRIntKDvR&si=lY4z4zAVjqaS2aDw",
+                    primary: false
+                }
+
+            ]
+
+        }
+
+    ];
+
+
+    /*
+     * ======================================================
+     * ELEMENTS
+     * ======================================================
+     */
+
+    var content =
+        document.getElementById("ddSlideContent");
+
+    var titleMain =
+        document.getElementById("ddTitleMain");
+
+    var titleSecond =
+        document.getElementById("ddTitleSecond");
+
+    var status =
+        document.getElementById("ddStatus");
+
+    var year =
+        document.getElementById("ddYear");
+
+    var taglineStrong =
+        document.getElementById("ddTaglineStrong");
+
+    var tagline =
+        document.getElementById("ddTagline");
+
+    var description =
+        document.getElementById("ddDescription");
+
+    var nowPlaying =
+        document.getElementById("ddNowPlaying");
+
+    var buttons =
+        document.getElementById("ddHeroButtons");
+
+
+    var current = 0;
+
+    var interval = 5000;
+
+
+    /*
+     * ======================================================
+     * RENDER RELEASE
+     * ======================================================
+     */
+
+    function renderRelease(release) {
+
+        titleMain.textContent =
+            release.main;
+
+        titleSecond.textContent =
+            release.second;
+
+        status.textContent =
+            release.status;
+
+        year.textContent =
+            release.year;
+
+        taglineStrong.textContent =
+            release.taglineStrong;
+
+        tagline.textContent =
+            release.tagline;
+
+        description.textContent =
+            release.description;
+
+        nowPlaying.textContent =
+            release.nowPlaying;
+
+
+        /*
+         * Rebuild ONLY the hero buttons.
+         *
+         * The YouTube iframe is NOT touched.
+         */
+
+        buttons.innerHTML = "";
+
+
+        release.buttons.forEach(function (button) {
+
+            var link =
+                document.createElement("a");
+
+            link.href =
+                button.url;
+
+            link.textContent =
+                button.text;
+
+            link.className =
+                "dd-button " +
+                (
+                    button.primary
+                        ? "dd-button-primary"
+                        : "dd-button-secondary"
+                );
+
+
+            if (button.url !== "#") {
+
+                link.target =
+                    "_blank";
+
+                link.rel =
+                    "noopener";
+
+            }
+
+
+            buttons.appendChild(link);
+
+        });
+
+    }
+
+
+    /*
+     * ======================================================
+     * SLIDE CHANGE
+     * ======================================================
+     */
+
+    function nextRelease() {
+
+        if (releases.length < 2) {
+            return;
+        }
+
+
+        content.classList.add(
+            "is-changing"
+        );
+
+
+        setTimeout(function () {
+
+            current++;
+
+            if (current >= releases.length) {
+                current = 0;
+            }
+
+
+            renderRelease(
+                releases[current]
+            );
+
+
+            content.classList.remove(
+                "is-changing"
+            );
+
+
+        }, 550);
+
+    }
+
+
+    /*
+     * ======================================================
+     * INITIALIZE
+     * ======================================================
+     */
+
+    renderRelease(
+        releases[0]
+    );
+
+
+    /*
+     * ======================================================
+     * AUTO SLIDE
+     *
+     * Five seconds.
+     * ======================================================
+     */
+
+    var timer =
+        window.setInterval(
+            nextRelease,
+            interval
+        );
+
+
+    /*
+     * ======================================================
+     * PAUSE WHEN TAB IS HIDDEN
+     *
+     * Saves CPU/battery and is friendlier to phones.
+     * ======================================================
+     */
+
+    document.addEventListener(
+        "visibilitychange",
+        function () {
+
+            if (
+                document.hidden
+            ) {
+
+                window.clearInterval(
+                    timer
+                );
+
+            } else {
+
+                timer =
+                    window.setInterval(
+                        nextRelease,
+                        interval
+                    );
+
+            }
+
+        }
+    );
+
+
+    /*
+     * ======================================================
+     * SIMPLE PARALLAX
+     *
+     * CSS transform only.
+     *
+     * Disabled on reduced-motion devices.
+     * ======================================================
+     */
+
+    var hero =
+        document.querySelector(
+            ".dd-hero"
+        );
+
+    var energy =
+        document.querySelector(
+            ".dd-energy"
+        );
+
+    var yearLayer =
+        document.querySelector(
+            ".dd-year"
+        );
+
+
+    var reducedMotion =
+        window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+        );
+
+
+    if (
+        !reducedMotion.matches &&
+        window.innerWidth > 650
+    ) {
+
+        var ticking = false;
+
+
+        window.addEventListener(
+            "mousemove",
+            function (event) {
+
+                if (ticking) {
+                    return;
+                }
+
+
+                ticking = true;
+
+
+                window.requestAnimationFrame(
+                    function () {
+
+                        var x =
+                            (
+                                event.clientX /
+                                window.innerWidth
+                            ) - .5;
+
+
+                        var y =
+                            (
+                                event.clientY /
+                                window.innerHeight
+                            ) - .5;
+
+
+                        energy.style.transform =
+                            "translate(" +
+                            (x * 18) +
+                            "px," +
+                            (y * 18) +
+                            "px) scale(1.12)";
+
+
+                        yearLayer.style.transform =
+                            "translate(" +
+                            (x * -10) +
+                            "px," +
+                            (y * -5) +
+                            "px)";
+
+
+                        ticking = false;
+
+                    }
+                );
+
+            },
+            {
+                passive: true
+            }
+        );
+
+    }
+
+
+})();
+
+</script>
 
 
 </body>

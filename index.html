@@ -1640,12 +1640,67 @@
 .dd-mix-era{font-size:8px;font-weight:900;letter-spacing:2px;color:#ff1744}
 .dd-mix-link{font-size:8px;font-weight:900;letter-spacing:2px;color:#fff;border-bottom:1px solid #ff1744;padding-bottom:4px}
 @media(max-width:900px){
-  .dd-club-grid{grid-template-columns:1fr}
-  .dd-mix-card,.dd-mix-card:nth-child(1),.dd-mix-card:nth-child(2),.dd-mix-card:nth-child(3){transform:none}
+  .dd-club-tearout{
+    overflow:visible;
+  }
+  .dd-club-inner{
+    width:100%;
+    max-width:100%;
+  }
+  .dd-club-grid{
+    display:grid;
+    grid-template-columns:minmax(0,1fr);
+    gap:24px;
+    width:100%;
+    max-width:100%;
+    overflow:visible;
+  }
+  .dd-mix-card,
+  .dd-mix-card:nth-child(1),
+  .dd-mix-card:nth-child(2),
+  .dd-mix-card:nth-child(3){
+    transform:none;
+    width:100%;
+    max-width:100%;
+    min-width:0;
+    min-height:auto;
+    overflow:visible;
+  }
+  .dd-mix-player{
+    width:100%;
+    max-width:100%;
+    display:block;
+  }
 }
 @media(max-width:700px){
-  .dd-club-tearout{padding:75px 20px 100px!important}
-  .dd-mix-card{padding:22px;min-height:auto}
+  .dd-club-tearout{
+    padding:75px 16px 100px!important;
+    overflow:visible;
+  }
+  .dd-club-head{
+    gap:14px;
+  }
+  .dd-club-title{
+    font-size:clamp(42px,14vw,52px);
+    letter-spacing:-3px;
+  }
+  .dd-club-stamp{
+    flex:0 0 72px;
+    width:72px;
+    height:72px;
+  }
+  .dd-mix-card{
+    padding:20px 16px;
+    min-height:auto;
+  }
+  .dd-mix-card h3,
+  .dd-mix-card p{
+    min-height:0;
+  }
+  .dd-mix-bottom{
+    align-items:flex-start;
+    flex-direction:column;
+  }
 }
 @media(prefers-reduced-motion:reduce){.dd-mix-disc{animation:none}}
 
@@ -1845,6 +1900,20 @@
 }
 @media(prefers-reduced-motion:reduce){.dd-club-disc{animation:none}}
 
+/* Mobile safeguard: keep all three Club Mix cards in normal document flow. */
+@media(max-width:900px){
+  #club-mixes{overflow:visible!important;height:auto!important;min-height:0!important}
+  #club-mixes .dd-club-inner,
+  #club-mixes .dd-club-grid,
+  #club-mixes .dd-mix-card{width:100%;max-width:100%;min-width:0}
+  #club-mixes .dd-club-grid{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:24px!important}
+  #club-mixes .dd-mix-card{display:block!important;position:relative!important;transform:none!important;overflow:visible!important}
+  #club-mixes .dd-mix-player{width:100%!important;max-width:100%!important}
+}
+@media(max-width:700px){
+  #club-mixes{padding:70px 16px 95px!important}
+}
+
   </style>
 
 </head>
@@ -1915,64 +1984,6 @@
     </header>
 
 
-  <!-- =======================================================
-       CLUB MIXES — COMIC BOOK TEAR-OUT
-       ======================================================= -->
-  <!-- =======================================================
-       CLUB MIXES — COMIC BOOK TEAR-OUT / 3 MIXES
-       ======================================================= -->
-  <section class="dd-club-tearout" id="club-mixes">
-    <div class="dd-club-inner">
-      <div class="dd-club-kicker">SOUND ON · CLUB EDITION</div>
-      <div class="dd-club-head">
-        <h2 class="dd-club-title">CLUB<br><span>MIXES</span></h2>
-        <div class="dd-club-stamp">DJ<br>DANGEROUS<br>AFTER DARK<br>★</div>
-      </div>
-      <div class="dd-club-intro">
-        <i></i><strong>THREE ARCHIVE MIXES</strong>
-        <span>House Music Mix · </span><i></i>
-      </div>
-      <div class="dd-club-grid">
-
-        <article class="dd-mix-card">
-          <div class="dd-mix-number"><strong>01</strong><span>JUNE / 2012</span></div>
-          
-          <h3><br>Club Mix #3</h3>
-          <p>House club mix · DJ Dangerous Raj Desai</p>
-          <iframe class="dd-mix-player" scrolling="no" frameborder="no" allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdancemusic2018%2Fjune-2012-club-mix-3-house-dj-dangerous-raj-desai&color=%23ff1744&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"></iframe>
-          <div class="dd-mix-bottom">
-            <span class="dd-mix-era">ARCHIVE CUT</span>
-            <a class="dd-mix-link" href="https://soundcloud.com/dancemusic2018/june-2012-club-mix-3-house-dj-dangerous-raj-desai" target="_blank" rel="noopener">OPEN MIX ↗</a>
-          </div>
-        </article>
-        <article class="dd-mix-card">
-          <div class="dd-mix-number"><strong>02</strong><span>JUNE / 2012</span></div>
-         
-          <h3><br>Club Mix #2</h3>
-          <p>House Music Mix  · DJ Dangerous Raj Desai</p>
-          <iframe class="dd-mix-player" scrolling="no" frameborder="no" allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdancemusic2018%2Fhouse-music-2012-clubmix2-june-2012-dj-dangerous-raj-desai&color=%23ff1744&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"></iframe>
-          <div class="dd-mix-bottom">
-            <span class="dd-mix-era">ARCHIVE CUT</span>
-            <a class="dd-mix-link" href="https://soundcloud.com/dancemusic2018/house-music-2012-clubmix2-june-2012-dj-dangerous-raj-desai" target="_blank" rel="noopener">OPEN MIX ↗</a>
-          </div>
-        </article>
-        <article class="dd-mix-card">
-          <div class="dd-mix-number"><strong>03</strong><span>2012 / HITS</span></div>
-        
-          <h3>Club Mix #1 <br></h3>
-          <p>DJ Dangerous house mix · New Hits archive</p>
-          <iframe class="dd-mix-player" scrolling="no" frameborder="no" allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdjdangerousmusic%2Fhouse-music-2012-new-hits&color=%23ff1744&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"></iframe>
-          <div class="dd-mix-bottom">
-            <span class="dd-mix-era">ARCHIVE CUT</span>
-            <a class="dd-mix-link" href="https://soundcloud.com/djdangerousmusic/house-music-2012-new-hits" target="_blank" rel="noopener">OPEN MIX ↗</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
 
 
     <!-- HERO CONTENT -->
@@ -2146,6 +2157,67 @@
     </div>
 
 
+  </section>
+
+
+
+  <!-- =======================================================
+       CLUB MIXES — COMIC BOOK TEAR-OUT
+       ======================================================= -->
+  <!-- =======================================================
+       CLUB MIXES — COMIC BOOK TEAR-OUT / 3 MIXES
+       ======================================================= -->
+  <section class="dd-club-tearout" id="club-mixes">
+    <div class="dd-club-inner">
+      <div class="dd-club-kicker">SOUND ON · CLUB EDITION</div>
+      <div class="dd-club-head">
+        <h2 class="dd-club-title">CLUB<br><span>MIXES</span></h2>
+        <div class="dd-club-stamp">DJ<br>DANGEROUS<br>AFTER DARK<br>★</div>
+      </div>
+      <div class="dd-club-intro">
+        <i></i><strong>THREE ARCHIVE MIXES</strong>
+        <span>House Music Mix · </span><i></i>
+      </div>
+      <div class="dd-club-grid">
+
+        <article class="dd-mix-card">
+          <div class="dd-mix-number"><strong>01</strong><span>JUNE / 2012</span></div>
+          
+          <h3><br>Club Mix #3</h3>
+          <p>House club mix · DJ Dangerous Raj Desai</p>
+          <iframe class="dd-mix-player" scrolling="no" frameborder="no" allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdancemusic2018%2Fjune-2012-club-mix-3-house-dj-dangerous-raj-desai&color=%23ff1744&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"></iframe>
+          <div class="dd-mix-bottom">
+            <span class="dd-mix-era">ARCHIVE CUT</span>
+            <a class="dd-mix-link" href="https://soundcloud.com/dancemusic2018/june-2012-club-mix-3-house-dj-dangerous-raj-desai" target="_blank" rel="noopener">OPEN MIX ↗</a>
+          </div>
+        </article>
+        <article class="dd-mix-card">
+          <div class="dd-mix-number"><strong>02</strong><span>JUNE / 2012</span></div>
+         
+          <h3><br>Club Mix #2</h3>
+          <p>House Music Mix  · DJ Dangerous Raj Desai</p>
+          <iframe class="dd-mix-player" scrolling="no" frameborder="no" allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdancemusic2018%2Fhouse-music-2012-clubmix2-june-2012-dj-dangerous-raj-desai&color=%23ff1744&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"></iframe>
+          <div class="dd-mix-bottom">
+            <span class="dd-mix-era">ARCHIVE CUT</span>
+            <a class="dd-mix-link" href="https://soundcloud.com/dancemusic2018/house-music-2012-clubmix2-june-2012-dj-dangerous-raj-desai" target="_blank" rel="noopener">OPEN MIX ↗</a>
+          </div>
+        </article>
+        <article class="dd-mix-card">
+          <div class="dd-mix-number"><strong>03</strong><span>2012 / HITS</span></div>
+        
+          <h3>Club Mix #1 <br></h3>
+          <p>DJ Dangerous house mix · New Hits archive</p>
+          <iframe class="dd-mix-player" scrolling="no" frameborder="no" allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdjdangerousmusic%2Fhouse-music-2012-new-hits&color=%23ff1744&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"></iframe>
+          <div class="dd-mix-bottom">
+            <span class="dd-mix-era">ARCHIVE CUT</span>
+            <a class="dd-mix-link" href="https://soundcloud.com/djdangerousmusic/house-music-2012-new-hits" target="_blank" rel="noopener">OPEN MIX ↗</a>
+          </div>
+        </article>
+      </div>
+    </div>
   </section>
 
 

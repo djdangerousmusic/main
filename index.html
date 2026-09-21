@@ -391,6 +391,89 @@
     }
 
 
+
+    /* =========================================================
+       LARGE ALWAYS-VISIBLE SECTION BUTTONS
+       ========================================================= */
+
+    .dd-nav {
+      position: fixed;
+      left: 50%;
+      top: 18px;
+      bottom: auto;
+      transform: translateX(-50%);
+      z-index: 9999;
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      width: min(1180px, calc(100% - 36px));
+      gap: 8px;
+      padding: 8px;
+      border: 1px solid rgba(255,255,255,.22);
+      border-radius: 16px;
+      background: rgba(5,5,5,.88);
+      box-shadow: 0 12px 40px rgba(0,0,0,.55);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .dd-nav a {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
+      padding: 12px 10px;
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 10px;
+      background: #ff1744;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-align: center;
+      text-decoration: none;
+      transition: .2s ease;
+    }
+
+    .dd-nav a::after {
+      display: none;
+    }
+
+    .dd-nav a:hover,
+    .dd-nav a:focus-visible {
+      color: #fff;
+      background: #ff1744;
+      border-color: #ff1744;
+      transform: translateY(-2px);
+    }
+
+    .dd-nav a:active {
+      transform: translateY(0);
+    }
+
+    @media (max-width: 650px) {
+      .dd-nav {
+        left: 10px;
+        right: 10px;
+        top: calc(10px + env(safe-area-inset-top));
+        bottom: auto;
+        transform: none;
+        width: auto;
+        gap: 5px;
+        padding: 6px;
+        border-radius: 14px;
+      }
+
+      .dd-nav a {
+        min-height: 52px;
+        padding: 8px 3px;
+        border-radius: 9px;
+        font-size: 8px;
+        letter-spacing: 1px;
+        line-height: 1.15;
+      }
+    }
+
     /* =========================================================
        HERO CONTENT
        ========================================================= */
@@ -1916,6 +1999,14 @@
 
   </style>
 
+
+<style id="dd-top-nav-white-border">
+/* Cool thin white border for the fixed top navigation buttons */
+.dd-top-nav a, .dd-mobile-nav a, .dd-nav-buttons a, .dd-top-buttons a {
+  border: 1px solid rgba(255,255,255,.92) !important;
+  box-shadow: 0 0 0 1px rgba(255,255,255,.08), 0 4px 18px rgba(0,0,0,.28) !important;
+}
+</style>
 </head>
 
 
@@ -2558,6 +2649,99 @@
   </footer>
 
 
+
+<!-- SOCIAL MEDIA BAR -->
+<div class="dd-social-bar" aria-label="DJ Dangerous social media">
+  <a href="https://www.instagram.com/djdangerousrajdesai/" target="_blank" rel="noopener" aria-label="Instagram">INSTAGRAM</a>
+  <a href="https://www.tiktok.com/@djdangerous.music" target="_blank" rel="noopener" aria-label="TikTok">TIKTOK</a>
+  <a href="https://soundcloud.com/djdangerousmusic" target="_blank" rel="noopener" aria-label="SoundCloud">SOUNDCLOUD</a>
+  <a href="https://www.youtube.com/djdangerousmusic" target="_blank" rel="noopener" aria-label="YouTube">YOUTUBE</a>
+  <a href="https://twitter.com/djdang3rousrajd" target="_blank" rel="noopener" aria-label="Twitter">TWITTER</a>
+  <a href="https://www.facebook.com/djdangerousrajdesaimusic" target="_blank" rel="noopener" aria-label="Facebook">FACEBOOK</a>
+</div>
+
+<style>
+/* Bottom social media buttons */
+.dd-social-bar{
+  position:fixed;
+  left:50%;
+  bottom:0;
+  transform:translateX(-50%);
+  z-index:99999;
+  width:min(100%,1200px);
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:8px;
+  padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+  background:rgba(0,0,0,.94);
+  border-top:1px solid rgba(255,255,255,.28);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+}
+.dd-social-bar a{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:42px;
+  padding:10px 15px;
+  border:1px solid rgba(255,255,255,.82);
+  border-radius:6px;
+  background:#ff1744;
+  color:#fff;
+  font:800 12px/1 Arial,Helvetica,sans-serif;
+  letter-spacing:.08em;
+  text-decoration:none;
+  box-shadow:0 3px 0 rgba(120,0,20,.7),0 6px 16px rgba(0,0,0,.35);
+  transition:transform .15s ease,background .15s ease,box-shadow .15s ease;
+}
+.dd-social-bar a:hover,.dd-social-bar a:focus-visible{
+  background:#ff3b62;
+  transform:translateY(-2px);
+  box-shadow:0 5px 0 rgba(120,0,20,.7),0 9px 20px rgba(0,0,0,.45);
+}
+@media(max-width:700px){
+  .dd-social-bar{
+    gap:6px;
+    padding:8px 8px calc(8px + env(safe-area-inset-bottom));
+  }
+  .dd-social-bar a{
+    flex:1 1 calc(33.333% - 6px);
+    min-width:0;
+    min-height:38px;
+    padding:9px 5px;
+    font-size:9px;
+    letter-spacing:.04em;
+  }
+}
+</style>
+
 </body>
 
 </html>
+<style>
+/* Final override: five large red section buttons, fixed at the top. */
+.dd-nav {
+  top: 18px !important;
+  bottom: auto !important;
+}
+.dd-nav a {
+  background: #ff1744 !important;
+  color: #fff !important;
+  border-color: #ff1744 !important;
+  box-shadow: 0 5px 0 rgba(120,0,20,.65), 0 10px 24px rgba(0,0,0,.35);
+}
+.dd-nav a:hover,
+.dd-nav a:focus-visible {
+  background: #ff3b62 !important;
+  border-color: #ff3b62 !important;
+  color: #fff !important;
+}
+@media (max-width: 650px) {
+  .dd-nav {
+    display: grid !important;
+    top: calc(10px + env(safe-area-inset-top)) !important;
+    bottom: auto !important;
+  }
+}
+</style>

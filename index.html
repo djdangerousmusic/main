@@ -2006,6 +2006,54 @@
   border: 1px solid rgba(255,255,255,.92) !important;
   box-shadow: 0 0 0 1px rgba(255,255,255,.08), 0 4px 18px rgba(0,0,0,.28) !important;
 }
+
+
+    /* AMAZON-STYLE TOP 10 RELEASE RAIL — red / black / white */
+    .dd-top10-section{position:relative;padding:76px clamp(18px,4vw,64px);background:linear-gradient(180deg,#080808,#030303);border-top:1px solid rgba(255,0,45,.7);border-bottom:1px solid rgba(255,0,45,.55)}
+    .dd-top10-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin:0 auto 28px;max-width:1500px}
+    .dd-top10-heading h2{font-size:clamp(40px,6vw,76px);line-height:.9;letter-spacing:-.05em;font-weight:1000;color:#fff;margin:9px 0 12px}
+    .dd-top10-heading h2 span{color:#ff173b;text-shadow:0 0 24px rgba(255,0,45,.25)}
+    .dd-top10-heading p{max-width:620px;color:rgba(255,255,255,.7);line-height:1.6;font-size:14px}
+    .dd-top10-all{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;border:1px solid #ff173b;color:#fff;padding:13px 17px;font-size:11px;font-weight:900;letter-spacing:1px;transition:.2s;background:rgba(255,0,45,.08)}
+    .dd-top10-all:hover{background:#d90025;box-shadow:0 0 24px rgba(255,0,45,.28)}
+    .dd-top10-grid{max-width:1500px;margin:auto;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px}
+    .dd-top10-card{min-width:0;overflow:hidden;background:#090909;border:1px solid rgba(255,255,255,.18);border-radius:7px;transition:transform .2s,border-color .2s,box-shadow .2s}
+    .dd-top10-card:hover{transform:translateY(-5px);border-color:#ff173b;box-shadow:0 10px 28px rgba(255,0,45,.17)}
+    .dd-top10-art{position:relative;aspect-ratio:1/1;display:flex;flex-direction:column;justify-content:flex-end;gap:9px;overflow:hidden;padding:16px;color:white;background:radial-gradient(circle at 75% 20%,rgba(255,0,45,.6),transparent 34%),linear-gradient(145deg,#191919 0%,#050505 54%,#36000c 100%);isolation:isolate}
+    .dd-top10-art:before{content:"";position:absolute;inset:0;z-index:-1;opacity:.55;background:repeating-linear-gradient(115deg,transparent 0 14px,rgba(255,255,255,.05) 15px 16px),linear-gradient(0deg,rgba(0,0,0,.94),transparent 75%)}
+    .dd-top10-rank{position:absolute;top:10px;left:10px;display:grid;place-items:center;width:43px;height:43px;background:#ed002c;color:white;font-size:21px;font-weight:1000;border-radius:3px;box-shadow:0 0 18px rgba(255,0,45,.32)}
+    .dd-top10-art-kicker{font-size:8px;font-weight:900;letter-spacing:2px;color:#ff6278}
+    .dd-top10-art strong{font-size:clamp(15px,1.5vw,23px);line-height:1.02;letter-spacing:-.035em;text-transform:uppercase;text-wrap:balance;overflow-wrap:anywhere;text-shadow:0 2px 8px #000}
+    .dd-top10-art-bottom{font-size:8px;letter-spacing:1.6px;font-weight:900;color:rgba(255,255,255,.75)}
+    .dd-top10-info{padding:13px;display:flex;flex-direction:column;gap:8px}
+    .dd-top10-meta{min-height:11px;color:#ff4564;font-size:8px;font-weight:900;letter-spacing:1px}
+    .dd-top10-info h3{font-size:14px;line-height:1.25;color:#fff;overflow-wrap:anywhere}
+    .dd-top10-info p{font-size:11px;line-height:1.4;color:rgba(255,255,255,.62)}
+    .dd-top10-listen{display:flex;align-items:center;justify-content:center;min-height:38px;margin-top:3px;padding:9px 7px;background:#d90025;color:white;border:1px solid rgba(255,255,255,.35);font-size:9px;font-weight:900;letter-spacing:.5px;text-align:center;transition:.2s}
+    .dd-top10-listen:hover{background:#ff173b;box-shadow:0 0 18px rgba(255,0,45,.3)}
+    .dd-top10-note{max-width:1500px;margin:18px auto 0;font-size:10px;line-height:1.5;color:rgba(255,255,255,.45)}
+    /* COMPACT TOP 10 RAIL — sits near the top without overwhelming the hero */
+    .dd-top10-section{padding:26px clamp(14px,3vw,42px) 30px;background:linear-gradient(180deg,rgba(16,5,8,.96),#030303 88%);border-top:1px solid rgba(255,0,45,.8);border-bottom:1px solid rgba(255,0,45,.45)}
+    .dd-top10-heading{align-items:center;margin:0 auto 16px;gap:18px}
+    .dd-top10-heading h2{font-size:clamp(28px,3.5vw,44px);margin:4px 0 5px;line-height:.95}
+    .dd-top10-heading p{font-size:11px;line-height:1.35;max-width:500px}
+    .dd-top10-all{padding:10px 13px;font-size:10px}
+    .dd-top10-grid{display:flex;gap:10px;max-width:1500px;margin:auto;overflow-x:auto;overflow-y:hidden;padding:2px 2px 12px;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:#ed002c #171717}
+    .dd-top10-card{flex:0 0 clamp(118px,12.3vw,158px);scroll-snap-align:start;border-radius:5px;background:linear-gradient(160deg,#111,#050505);border-color:rgba(255,255,255,.22)}
+    .dd-top10-card:hover{transform:translateY(-3px)}
+    .dd-top10-art{aspect-ratio:1.12/1;padding:9px;gap:5px;background:radial-gradient(circle at 75% 20%,rgba(255,0,45,.48),transparent 36%),linear-gradient(145deg,#191919 0%,#050505 54%,#36000c 100%)}
+    .dd-top10-rank{top:6px;left:6px;width:27px;height:27px;font-size:14px;box-shadow:0 0 12px rgba(255,0,45,.28)}
+    .dd-top10-art-kicker{font-size:6px;letter-spacing:1px}
+    .dd-top10-art strong{font-size:clamp(11px,1vw,14px);line-height:1.03}
+    .dd-top10-art-bottom{font-size:6px;letter-spacing:1px}
+    .dd-top10-info{padding:8px;gap:5px}
+    .dd-top10-meta{font-size:7px;letter-spacing:.7px;min-height:8px}
+    .dd-top10-info h3{font-size:10px;line-height:1.2}
+    .dd-top10-info p{font-size:9px;line-height:1.25}
+    .dd-top10-listen{min-height:29px;padding:6px 4px;font-size:7px;letter-spacing:.2px}
+    .dd-top10-note{margin:8px auto 0;font-size:9px}
+    @media(max-width:700px){.dd-top10-section{padding:20px 12px 22px}.dd-top10-heading{flex-direction:row;align-items:center;gap:10px;margin-bottom:12px}.dd-top10-heading h2{font-size:30px}.dd-top10-heading p{font-size:10px}.dd-top10-all{padding:8px 9px;font-size:8px;white-space:normal;max-width:118px}.dd-top10-card{flex-basis:124px}.dd-top10-art{padding:8px}.dd-top10-rank{width:25px;height:25px;font-size:13px}.dd-top10-info{padding:7px}.dd-top10-info h3{font-size:10px}.dd-top10-listen{font-size:7px}}
+    @media(max-width:390px){.dd-top10-heading{align-items:flex-start;flex-wrap:wrap}.dd-top10-heading>div{flex:1 1 180px}.dd-top10-all{max-width:none}.dd-top10-card{flex-basis:112px}}
 </style>
 </head>
 
@@ -2060,7 +2108,11 @@
 
       <nav class="dd-nav">
 
+        <a href="#home">HOME</a>
+
         <a href="#music">MUSIC</a>
+
+        <a href="#top-ten">TOP 10</a>
 
         <a href="#club-mixes">CLUB MIXES</a>
 
@@ -2242,99 +2294,106 @@
 
 
 
-  <!-- =======================================================
-       CLUB MIXES — COMIC BOOK TEAR-OUT
-       ======================================================= -->
-  <!-- =======================================================
-       CLUB MIXES — COMIC BOOK TEAR-OUT / 3 MIXES
-       ======================================================= -->
-  <section class="dd-club-tearout" id="club-mixes">
-    <div class="dd-club-inner">
-      <div class="dd-club-kicker">SOUND ON · CLUB EDITION</div>
-      <div class="dd-club-head">
-        <h2 class="dd-club-title">CLUB<br><span>MIXES</span></h2>
-        <div class="dd-club-stamp">DJ<br>DANGEROUS<br>AFTER DARK<br>★</div>
-      </div>
-      <div class="dd-club-intro">
-        <i></i><strong>THREE ARCHIVE MIXES</strong>
-        <span>House Music Mix · </span><i></i>
-      </div>
-      <div class="dd-club-grid">
-
-        <article class="dd-mix-card">
-          <div class="dd-mix-number"><strong>01</strong><span>JUNE / 2012</span></div>
-          
-          <h3><br>Club Mix #3</h3>
-          <p>House club mix · DJ Dangerous Raj Desai</p>
-          <iframe class="dd-mix-player" scrolling="no" frameborder="no" allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdancemusic2018%2Fjune-2012-club-mix-3-house-dj-dangerous-raj-desai&color=%23ff1744&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"></iframe>
-          <div class="dd-mix-bottom">
-            <span class="dd-mix-era">ARCHIVE CUT</span>
-            <a class="dd-mix-link" href="https://soundcloud.com/dancemusic2018/june-2012-club-mix-3-house-dj-dangerous-raj-desai" target="_blank" rel="noopener">OPEN MIX ↗</a>
-          </div>
-        </article>
-        <article class="dd-mix-card">
-          <div class="dd-mix-number"><strong>02</strong><span>JUNE / 2012</span></div>
-         
-          <h3><br>Club Mix #2</h3>
-          <p>House Music Mix  · DJ Dangerous Raj Desai</p>
-          <iframe class="dd-mix-player" scrolling="no" frameborder="no" allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdancemusic2018%2Fhouse-music-2012-clubmix2-june-2012-dj-dangerous-raj-desai&color=%23ff1744&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"></iframe>
-          <div class="dd-mix-bottom">
-            <span class="dd-mix-era">ARCHIVE CUT</span>
-            <a class="dd-mix-link" href="https://soundcloud.com/dancemusic2018/house-music-2012-clubmix2-june-2012-dj-dangerous-raj-desai" target="_blank" rel="noopener">OPEN MIX ↗</a>
-          </div>
-        </article>
-        <article class="dd-mix-card">
-          <div class="dd-mix-number"><strong>03</strong><span>2012 / HITS</span></div>
-        
-          <h3>Club Mix #1 <br></h3>
-          <p>DJ Dangerous house mix · New Hits archive</p>
-          <iframe class="dd-mix-player" scrolling="no" frameborder="no" allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdjdangerousmusic%2Fhouse-music-2012-new-hits&color=%23ff1744&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"></iframe>
-          <div class="dd-mix-bottom">
-            <span class="dd-mix-era">ARCHIVE CUT</span>
-            <a class="dd-mix-link" href="https://soundcloud.com/djdangerousmusic/house-music-2012-new-hits" target="_blank" rel="noopener">OPEN MIX ↗</a>
-          </div>
-        </article>
-        <article class="dd-mix-card">
-          <div class="dd-mix-number"><strong>04</strong><span>CLUB / MIX 9</span></div>
-          <h3>Club Mix #4</h3>
-          <p>House club mix · DJ Dangerous archive</p>
-          <iframe class="dd-mix-player" scrolling="no" frameborder="no" allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fhousemusic2013%2Fclubmix9&color=%23ff1744&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"></iframe>
-          <div class="dd-mix-bottom">
-            <span class="dd-mix-era">ARCHIVE CUT</span>
-            <a class="dd-mix-link" href="https://soundcloud.com/housemusic2013/clubmix9" target="_blank" rel="noopener">OPEN MIX ↗</a>
-          </div>
-        </article>
-        <article class="dd-mix-card">
-          <div class="dd-mix-number"><strong>05</strong><span>CLUB / MIX 8</span></div>
-          <h3>Club Mix #5</h3>
-          <p>House club mix · DJ Dangerous archive</p>
-          <iframe class="dd-mix-player" scrolling="no" frameborder="no" allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fhousemusic2013%2Fclubmix8&color=%23ff1744&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"></iframe>
-          <div class="dd-mix-bottom">
-            <span class="dd-mix-era">ARCHIVE CUT</span>
-            <a class="dd-mix-link" href="https://soundcloud.com/housemusic2013/clubmix8" target="_blank" rel="noopener">OPEN MIX ↗</a>
-          </div>
-        </article>
-        <article class="dd-mix-card">
-          <div class="dd-mix-number"><strong>06</strong><span>HOUSE MUSIC</span></div>
-          <h3>Club Mix #6</h3>
-          <p>House music mix · DJ Dangerous archive</p>
-          <iframe class="dd-mix-player" scrolling="no" frameborder="no" allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdjdangerousmusic%2Fhousemusic2013&color=%23ff1744&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"></iframe>
-          <div class="dd-mix-bottom">
-            <span class="dd-mix-era">ARCHIVE CUT</span>
-            <a class="dd-mix-link" href="https://soundcloud.com/djdangerousmusic/housemusic2013" target="_blank" rel="noopener">OPEN MIX ↗</a>
-          </div>
-        </article>
-      </div>
+  <!-- TOP 10 BANDCAMP RELEASES -->
+  <section id="top-ten" class="dd-top10-section" aria-labelledby="dd-top10-title">
+    <div class="dd-top10-heading">
+      <div><span class="dd-section-label">THE DISCography · BANDCAMP RELEASES</span><h2 id="dd-top10-title">TOP <span>10</span></h2><p>Explore ten standout tracks from DJ Dangerous Raj Desai. Each card opens the official Bandcamp release.</p></div>
+      <a class="dd-top10-all" href="https://djdangerous.bandcamp.com/" target="_blank" rel="noopener">FULL DISCOGRAPHY ↗</a>
     </div>
+    <div class="dd-top10-grid">
+      <article class="dd-top10-card">
+        <a class="dd-top10-art" href="https://djdangerous.bandcamp.com/track/this-is-the-last-time-you-lie-to-me" target="_blank" rel="noopener" aria-label="Open This Is The Last Time You Lie To Me on Bandcamp">
+          <span class="dd-top10-rank">01</span><span class="dd-top10-art-kicker">DJ DANGEROUS · BANDCAMP</span><strong>This Is The Last Time You Lie To Me</strong><span class="dd-top10-art-bottom">OFFICIAL RELEASE ↗</span>
+        </a>
+        <div class="dd-top10-info">
+          <div class="dd-top10-meta">NEW SINGLE</div><h3>This Is The Last Time You Lie To Me</h3><p>2026 · DJ Dangerous Raj Desai</p>
+          <a class="dd-top10-listen" href="https://djdangerous.bandcamp.com/track/this-is-the-last-time-you-lie-to-me" target="_blank" rel="noopener">▶ LISTEN ON BANDCAMP</a>
+        </div>
+      </article>
+      <article class="dd-top10-card">
+        <a class="dd-top10-art" href="https://djdangerous.bandcamp.com/track/call-me-baby" target="_blank" rel="noopener" aria-label="Open Call Me Baby on Bandcamp">
+          <span class="dd-top10-rank">02</span><span class="dd-top10-art-kicker">DJ DANGEROUS · BANDCAMP</span><strong>Call Me Baby</strong><span class="dd-top10-art-bottom">OFFICIAL RELEASE ↗</span>
+        </a>
+        <div class="dd-top10-info">
+          <div class="dd-top10-meta">LATEST CATALOG RELEASE</div><h3>Call Me Baby</h3><p>Sep 2026 · DJ Dangerous Raj Desai</p>
+          <a class="dd-top10-listen" href="https://djdangerous.bandcamp.com/track/call-me-baby" target="_blank" rel="noopener">▶ LISTEN ON BANDCAMP</a>
+        </div>
+      </article>
+      <article class="dd-top10-card">
+        <a class="dd-top10-art" href="https://djdangerous.bandcamp.com/track/i-dont-want-to-hear-your-lies-anymore" target="_blank" rel="noopener" aria-label="Open I Don't Want To Hear Your Lies Anymore on Bandcamp">
+          <span class="dd-top10-rank">03</span><span class="dd-top10-art-kicker">DJ DANGEROUS · BANDCAMP</span><strong>I Don't Want To Hear Your Lies Anymore</strong><span class="dd-top10-art-bottom">OFFICIAL RELEASE ↗</span>
+        </a>
+        <div class="dd-top10-info">
+          <div class="dd-top10-meta">PREVIOUS SINGLE</div><h3>I Don't Want To Hear Your Lies Anymore</h3><p>2026 · DJ Dangerous Raj Desai</p>
+          <a class="dd-top10-listen" href="https://djdangerous.bandcamp.com/track/i-dont-want-to-hear-your-lies-anymore" target="_blank" rel="noopener">▶ LISTEN ON BANDCAMP</a>
+        </div>
+      </article>
+      <article class="dd-top10-card">
+        <a class="dd-top10-art" href="https://djdangerous.bandcamp.com/track/this-is-the-end-of-the-world" target="_blank" rel="noopener" aria-label="Open This Is The End Of The World on Bandcamp">
+          <span class="dd-top10-rank">04</span><span class="dd-top10-art-kicker">DJ DANGEROUS · BANDCAMP</span><strong>This Is The End Of The World</strong><span class="dd-top10-art-bottom">OFFICIAL RELEASE ↗</span>
+        </a>
+        <div class="dd-top10-info">
+          <div class="dd-top10-meta">DJ DANGEROUS RAJ DESAI</div><h3>This Is The End Of The World</h3><p>2026 · DJ Dangerous Raj Desai</p>
+          <a class="dd-top10-listen" href="https://djdangerous.bandcamp.com/track/this-is-the-end-of-the-world" target="_blank" rel="noopener">▶ LISTEN ON BANDCAMP</a>
+        </div>
+      </article>
+      <article class="dd-top10-card">
+        <a class="dd-top10-art" href="https://djdangerous.bandcamp.com/track/beautiful-disaster" target="_blank" rel="noopener" aria-label="Open Beautiful Disaster on Bandcamp">
+          <span class="dd-top10-rank">05</span><span class="dd-top10-art-kicker">DJ DANGEROUS · BANDCAMP</span><strong>Beautiful Disaster</strong><span class="dd-top10-art-bottom">OFFICIAL RELEASE ↗</span>
+        </a>
+        <div class="dd-top10-info">
+          <div class="dd-top10-meta">DJ DANGEROUS RAJ DESAI</div><h3>Beautiful Disaster</h3><p>2026 · DJ Dangerous Raj Desai</p>
+          <a class="dd-top10-listen" href="https://djdangerous.bandcamp.com/track/beautiful-disaster" target="_blank" rel="noopener">▶ LISTEN ON BANDCAMP</a>
+        </div>
+      </article>
+      <article class="dd-top10-card">
+        <a class="dd-top10-art" href="https://djdangerous.bandcamp.com/track/dj-dangerous-raj-desai-song" target="_blank" rel="noopener" aria-label="Open DJ Dangerous Raj Desai Song on Bandcamp">
+          <span class="dd-top10-rank">06</span><span class="dd-top10-art-kicker">DJ DANGEROUS · BANDCAMP</span><strong>DJ Dangerous Raj Desai Song</strong><span class="dd-top10-art-bottom">OFFICIAL RELEASE ↗</span>
+        </a>
+        <div class="dd-top10-info">
+          <div class="dd-top10-meta">DJ DANGEROUS RAJ DESAI</div><h3>DJ Dangerous Raj Desai Song</h3><p>2026 · DJ Dangerous Raj Desai</p>
+          <a class="dd-top10-listen" href="https://djdangerous.bandcamp.com/track/dj-dangerous-raj-desai-song" target="_blank" rel="noopener">▶ LISTEN ON BANDCAMP</a>
+        </div>
+      </article>
+      <article class="dd-top10-card">
+        <a class="dd-top10-art" href="https://djdangerous.bandcamp.com/track/no-ass-bitch-no-backstage-pass-house" target="_blank" rel="noopener" aria-label="Open No Ass Bitch No Backstage Pass (House) on Bandcamp">
+          <span class="dd-top10-rank">07</span><span class="dd-top10-art-kicker">DJ DANGEROUS · BANDCAMP</span><strong>No Ass Bitch No Backstage Pass (House)</strong><span class="dd-top10-art-bottom">OFFICIAL RELEASE ↗</span>
+        </a>
+        <div class="dd-top10-info">
+          <div class="dd-top10-meta">DJ DANGEROUS RAJ DESAI</div><h3>No Ass Bitch No Backstage Pass (House)</h3><p>2018 · DJ Dangerous Raj Desai</p>
+          <a class="dd-top10-listen" href="https://djdangerous.bandcamp.com/track/no-ass-bitch-no-backstage-pass-house" target="_blank" rel="noopener">▶ LISTEN ON BANDCAMP</a>
+        </div>
+      </article>
+      <article class="dd-top10-card">
+        <a class="dd-top10-art" href="https://djdangerous.bandcamp.com/track/falling-through-the-noise" target="_blank" rel="noopener" aria-label="Open Falling Through The Noise on Bandcamp">
+          <span class="dd-top10-rank">08</span><span class="dd-top10-art-kicker">DJ DANGEROUS · BANDCAMP</span><strong>Falling Through The Noise</strong><span class="dd-top10-art-bottom">OFFICIAL RELEASE ↗</span>
+        </a>
+        <div class="dd-top10-info">
+          <div class="dd-top10-meta">DJ DANGEROUS RAJ DESAI</div><h3>Falling Through The Noise</h3><p>2017 · DJ Dangerous Raj Desai</p>
+          <a class="dd-top10-listen" href="https://djdangerous.bandcamp.com/track/falling-through-the-noise" target="_blank" rel="noopener">▶ LISTEN ON BANDCAMP</a>
+        </div>
+      </article>
+      <article class="dd-top10-card">
+        <a class="dd-top10-art" href="https://djdangerous.bandcamp.com/track/its-all-over" target="_blank" rel="noopener" aria-label="Open It's All Over on Bandcamp">
+          <span class="dd-top10-rank">09</span><span class="dd-top10-art-kicker">DJ DANGEROUS · BANDCAMP</span><strong>It's All Over</strong><span class="dd-top10-art-bottom">OFFICIAL RELEASE ↗</span>
+        </a>
+        <div class="dd-top10-info">
+          <div class="dd-top10-meta">DJ DANGEROUS RAJ DESAI</div><h3>It's All Over</h3><p>2017 · DJ Dangerous Raj Desai</p>
+          <a class="dd-top10-listen" href="https://djdangerous.bandcamp.com/track/its-all-over" target="_blank" rel="noopener">▶ LISTEN ON BANDCAMP</a>
+        </div>
+      </article>
+      <article class="dd-top10-card">
+        <a class="dd-top10-art" href="https://djdangerous.bandcamp.com/track/shadows-in-the-rain" target="_blank" rel="noopener" aria-label="Open Shadows In The Rain on Bandcamp">
+          <span class="dd-top10-rank">10</span><span class="dd-top10-art-kicker">DJ DANGEROUS · BANDCAMP</span><strong>Shadows In The Rain</strong><span class="dd-top10-art-bottom">OFFICIAL RELEASE ↗</span>
+        </a>
+        <div class="dd-top10-info">
+          <div class="dd-top10-meta">DJ DANGEROUS RAJ DESAI</div><h3>Shadows In The Rain</h3><p>Nov 2025 · DJ Dangerous Raj Desai</p>
+          <a class="dd-top10-listen" href="https://djdangerous.bandcamp.com/track/shadows-in-the-rain" target="_blank" rel="noopener">▶ LISTEN ON BANDCAMP</a>
+        </div>
+      </article>
+    </div>
+    <p class="dd-top10-note">A curated Top 10-style showcase, not a live popularity ranking. Open each official Bandcamp link to view the release page and its original artwork.</p>
   </section>
-
-
 
   <!-- =======================================================
        MUSIC — NEW RELEASE + PREVIOUS SONGS
@@ -2374,9 +2433,9 @@
             <a href="https://soundcloud.com/djdangerousmusic" target="_blank" rel="noopener">SOUNDCLOUD ↗</a>
             <a href="https://www.youtube.com/djdangerousmusic" target="_blank" rel="noopener">YOUTUBE ↗</a>
             <a href="https://www.instagram.com/djdangerousrajdesai/" target="_blank" rel="noopener">INSTAGRAM ↗</a>
-            <a href="https://www.tiktok.com/@djdangerous.music" target="_blank" rel="noopener">TOK ↗</a>
+            <a href="https://www.tiktok.com/@djdangerousmusic" target="_blank" rel="noopener">TIKTOK ↗</a>
             <a href="https://twitter.com/djdang3rousrajd" target="_blank" rel="noopener">TWITTER ↗</a>
-            <a href="https://www.facebook.com/djdangerousrajdesaimusic" target="_blank" rel="noopener">FACEBOOK ↗</a>
+            <a href="https://www.facebook.com/djdangerousrajdesai" target="_blank" rel="noopener">FACEBOOK ↗</a>
           </div>
         </div>
       </div>
@@ -2633,6 +2692,104 @@
 
 
   <!-- =======================================================
+       CLUB MIXES — COMIC BOOK TEAR-OUT
+       ======================================================= -->
+  <!-- =======================================================
+       CLUB MIXES — COMIC BOOK TEAR-OUT / 3 MIXES
+       ======================================================= -->
+  <section class="dd-club-tearout" id="club-mixes">
+    <div class="dd-club-inner">
+      <div class="dd-club-kicker">SOUND ON · CLUB EDITION</div>
+      <div class="dd-club-head">
+        <h2 class="dd-club-title">CLUB<br><span>MIXES</span></h2>
+        <div class="dd-club-stamp">DJ<br>DANGEROUS<br>AFTER DARK<br>★</div>
+      </div>
+      <div class="dd-club-intro">
+        <i></i><strong>SIX ARCHIVE MIXES</strong>
+        <span>House Music Mix · </span><i></i>
+      </div>
+      <div class="dd-club-grid">
+
+        <article class="dd-mix-card">
+          <div class="dd-mix-number"><strong>01</strong><span>JUNE / 2012</span></div>
+          
+          <h3><br>Club Mix #3</h3>
+          <p>House club mix · DJ Dangerous Raj Desai</p>
+          <iframe class="dd-mix-player" scrolling="no" frameborder="no" allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdancemusic2018%2Fjune-2012-club-mix-3-house-dj-dangerous-raj-desai&color=%23ff1744&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"></iframe>
+          <div class="dd-mix-bottom">
+            <span class="dd-mix-era">ARCHIVE CUT</span>
+            <a class="dd-mix-link" href="https://soundcloud.com/dancemusic2018/june-2012-club-mix-3-house-dj-dangerous-raj-desai" target="_blank" rel="noopener">OPEN MIX ↗</a>
+          </div>
+        </article>
+        <article class="dd-mix-card">
+          <div class="dd-mix-number"><strong>02</strong><span>JUNE / 2012</span></div>
+         
+          <h3><br>Club Mix #2</h3>
+          <p>House Music Mix  · DJ Dangerous Raj Desai</p>
+          <iframe class="dd-mix-player" scrolling="no" frameborder="no" allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdancemusic2018%2Fhouse-music-2012-clubmix2-june-2012-dj-dangerous-raj-desai&color=%23ff1744&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"></iframe>
+          <div class="dd-mix-bottom">
+            <span class="dd-mix-era">ARCHIVE CUT</span>
+            <a class="dd-mix-link" href="https://soundcloud.com/dancemusic2018/house-music-2012-clubmix2-june-2012-dj-dangerous-raj-desai" target="_blank" rel="noopener">OPEN MIX ↗</a>
+          </div>
+        </article>
+        <article class="dd-mix-card">
+          <div class="dd-mix-number"><strong>03</strong><span>2012 / HITS</span></div>
+        
+          <h3>Club Mix #1 <br></h3>
+          <p>DJ Dangerous house mix · New Hits archive</p>
+          <iframe class="dd-mix-player" scrolling="no" frameborder="no" allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdjdangerousmusic%2Fhouse-music-2012-new-hits&color=%23ff1744&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"></iframe>
+          <div class="dd-mix-bottom">
+            <span class="dd-mix-era">ARCHIVE CUT</span>
+            <a class="dd-mix-link" href="https://soundcloud.com/djdangerousmusic/house-music-2012-new-hits" target="_blank" rel="noopener">OPEN MIX ↗</a>
+          </div>
+        </article>
+        <article class="dd-mix-card">
+          <div class="dd-mix-number"><strong>04</strong><span>CLUB / MIX 9</span></div>
+          <h3>Club Mix #4</h3>
+          <p>House club mix · DJ Dangerous archive</p>
+          <iframe class="dd-mix-player" scrolling="no" frameborder="no" allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fhousemusic2013%2Fclubmix9&color=%23ff1744&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"></iframe>
+          <div class="dd-mix-bottom">
+            <span class="dd-mix-era">ARCHIVE CUT</span>
+            <a class="dd-mix-link" href="https://soundcloud.com/housemusic2013/clubmix9" target="_blank" rel="noopener">OPEN MIX ↗</a>
+          </div>
+        </article>
+        <article class="dd-mix-card">
+          <div class="dd-mix-number"><strong>05</strong><span>CLUB / MIX 8</span></div>
+          <h3>Club Mix #5</h3>
+          <p>House club mix · DJ Dangerous archive</p>
+          <iframe class="dd-mix-player" scrolling="no" frameborder="no" allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fhousemusic2013%2Fclubmix8&color=%23ff1744&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"></iframe>
+          <div class="dd-mix-bottom">
+            <span class="dd-mix-era">ARCHIVE CUT</span>
+            <a class="dd-mix-link" href="https://soundcloud.com/housemusic2013/clubmix8" target="_blank" rel="noopener">OPEN MIX ↗</a>
+          </div>
+        </article>
+        <article class="dd-mix-card">
+          <div class="dd-mix-number"><strong>06</strong><span>HOUSE MUSIC</span></div>
+          <h3>Club Mix #6</h3>
+          <p>House music mix · DJ Dangerous archive</p>
+          <iframe class="dd-mix-player" scrolling="no" frameborder="no" allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdjdangerousmusic%2Fhousemusic2013&color=%23ff1744&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"></iframe>
+          <div class="dd-mix-bottom">
+            <span class="dd-mix-era">ARCHIVE CUT</span>
+            <a class="dd-mix-link" href="https://soundcloud.com/djdangerousmusic/housemusic2013" target="_blank" rel="noopener">OPEN MIX ↗</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <!-- =======================================================
        SOCIAL / STORES
        ======================================================= -->
 
@@ -2769,11 +2926,11 @@
 <!-- SOCIAL MEDIA BAR -->
 <div class="dd-social-bar" aria-label="DJ Dangerous social media">
   <a href="https://www.instagram.com/djdangerousrajdesai/" target="_blank" rel="noopener" aria-label="Instagram">INSTAGRAM</a>
-  <a href="https://www.tiktok.com/@djdangerous.music" target="_blank" rel="noopener" aria-label="TikTok">TIKTOK</a>
+  <a href="https://www.tiktok.com/@djdangerousmusic" target="_blank" rel="noopener" aria-label="TikTok">TIKTOK</a>
   <a href="https://soundcloud.com/djdangerousmusic" target="_blank" rel="noopener" aria-label="SoundCloud">SOUNDCLOUD</a>
   <a href="https://www.youtube.com/djdangerousmusic" target="_blank" rel="noopener" aria-label="YouTube">YOUTUBE</a>
   <a href="https://twitter.com/djdang3rousrajd" target="_blank" rel="noopener" aria-label="Twitter">TWITTER</a>
-  <a href="https://www.facebook.com/djdangerousrajdesaimusic" target="_blank" rel="noopener" aria-label="Facebook">FACEBOOK</a>
+  <a href="https://www.facebook.com/djdangerousrajdesai" target="_blank" rel="noopener" aria-label="Facebook">FACEBOOK</a>
 </div>
 
 <style>
@@ -2833,6 +2990,21 @@
 </style>
 
 <div aria-hidden="true" style="height:82px;"></div>
+
+<style id="dd-screenshot-layout-refinements">
+  /* Screenshot-inspired finishing: tight, cinematic release grid and section rhythm. */
+  .dd-top10-section { padding-top: 38px; padding-bottom: 42px; }
+  .dd-top10-heading { margin-bottom: 22px; align-items: center; }
+  .dd-top10-heading h2 { margin-bottom: 6px; }
+  .dd-top10-card { border-color: rgba(255, 0, 45, .8); border-radius: 5px; }
+  .dd-top10-art { border-bottom: 1px solid rgba(255,255,255,.12); }
+  .dd-top10-rank { border-radius: 3px; }
+  .dd-club-tearout { margin-top: 0; }
+  .dd-club-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  @media (min-width: 1000px) { .dd-club-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  @media (max-width: 700px) { .dd-top10-section { padding: 36px 14px; } .dd-top10-heading { gap: 14px; } }
+</style>
+
 </body>
 
 </html>
